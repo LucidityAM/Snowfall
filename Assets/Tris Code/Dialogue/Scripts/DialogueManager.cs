@@ -28,8 +28,9 @@ public class DialogueManager : MonoBehaviour
     #region Condition Variables
     private bool isActive;
     private bool endText;
+    int count;
     #endregion
-
+    
     //Awake is called before the first frame update once and never again
     void Awake()
     {
@@ -49,9 +50,10 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        #region Resetting Bools
+        #region Resetting Variables
         isActive = false;
         endText = false;
+        count = 0;
         #endregion
 
         #region Resetting Queues
@@ -91,7 +93,10 @@ public class DialogueManager : MonoBehaviour
 
         #region Animation For Opening The Dialogue
         textBox.SetActive(true);
+        sprite.SetActive(true);
         textBoxAnim.SetTrigger("isOpen");
+        spriteImage.sprite = sprites.Dequeue();
+        count++;
         yield return new WaitForSeconds(0.5f);
         dialogueText.gameObject.SetActive(true);
         DisplayNextSentence();
@@ -101,12 +106,16 @@ public class DialogueManager : MonoBehaviour
     public void DisplayNextSentence()
     {
         //Condition checks if sentences are less than 0. If it is, it goes to EndDialogue()
-        if(sentences.Count <= 0)
+        if (sentences.Count <= 0)
         {
             StartCoroutine("EndDialogue");
             return;
         }
-
+        if (count > 1)
+        {
+            spriteImage.sprite = sprites.Dequeue();
+        }
+        count++;
         //Making local variables for the current sentence and name
         string sentence = sentences.Dequeue();
 
@@ -139,7 +148,6 @@ public class DialogueManager : MonoBehaviour
         //Enable player controls
 
         #region Turning off Animators in an Animation
-        spriteAnim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.7f);
         textBoxAnim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.3f);

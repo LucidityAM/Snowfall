@@ -19,7 +19,7 @@ public class DialogueTrigger : MonoBehaviour
      
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue()
     {
         FindObjectOfType<DialogueManager>().StartCoroutine("StartDialogue", dialogue);
     }

@@ -15,6 +15,8 @@ public class ScaryTransition : MonoBehaviour
     {
         while (anim.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
             yield return null;
+
+        anim.SetTrigger("Distortion");
     }
 }
     

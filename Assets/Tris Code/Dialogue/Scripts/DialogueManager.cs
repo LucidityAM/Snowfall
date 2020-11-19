@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
     //Queue for names and sentences
     private Queue<string> sentences;
     private Queue<Sprite> sprites;
-    private Queue<AudioClip> textSound;
+    private Queue<AudioClip> voices;
     #endregion
 
     #region Condition Variables
@@ -59,6 +59,7 @@ public class DialogueManager : MonoBehaviour
         #region Resetting Queues
         sentences = new Queue<string>();
         sprites = new Queue<Sprite>();
+        voices = new Queue<AudioClip>();
         #endregion
 
         #region Turning Off All Components
@@ -72,6 +73,7 @@ public class DialogueManager : MonoBehaviour
     {
         endText = false;
         isActive = true;
+        count = 0;
         //Player disabling happpens here
 
         #region Setting Up Queues. Turning Arrays > Queues
@@ -84,6 +86,11 @@ public class DialogueManager : MonoBehaviour
         foreach (Sprite sprite in dialogue.sprites)
         {
             sprites.Enqueue(sprite);
+        }
+        voices.Clear();
+        foreach(AudioClip voice in dialogue.voices)
+        {
+            voices.Enqueue(voice);
         }
         #endregion
 
@@ -148,9 +155,9 @@ public class DialogueManager : MonoBehaviour
         //Enable player controls
 
         #region Turning off Animators in an Animation
-        yield return new WaitForSeconds(0.7f);
-        textBoxAnim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.3f);
+        textBoxAnim.SetTrigger("isOpen");
+        yield return new WaitForSeconds(0.35f);
         #endregion
 
         #region Turning off Game Objects

@@ -11,6 +11,6 @@ public class Dialogue
 
     //different expression sprites
     public Sprite[] sprites;
-
+    public AudioClip[] voices;
 
 }

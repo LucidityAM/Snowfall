@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
-
+    public DialogueManager DM;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class DialogueTrigger : MonoBehaviour
 
     public void StartDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartCoroutine("StartDialogue", dialogue);
+        DM.StartCoroutine("StartDialogue", dialogue);
     }
 
 }

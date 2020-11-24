@@ -5,7 +5,6 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public DialogueTrigger dt;
-    public GameObject npc;
     public GameObject prompt;
 
     private Animator promptAnim;

@@ -37,13 +37,13 @@ public class DialogueManager : MonoBehaviour
         #region Getting All Private Components
         textBoxAnim = textBox.GetComponent<Animator>();
         spriteAnim = sprite.GetComponent<Animator>();
-        spriteImage = sprite.GetComponent<Image>();
+        spriteImage = sprite.GetComponent<Image>(); 
         #endregion
 
         #region Turning Off All Components
         dialogueText.gameObject.SetActive(false);
         textBox.SetActive(false);
-        sprite.SetActive(false);
+        sprite.SetActive(false); 
         #endregion
     }
 
@@ -100,9 +100,10 @@ public class DialogueManager : MonoBehaviour
 
         #region Animation For Opening The Dialogue
         textBox.SetActive(true);
-        sprite.SetActive(true);
+        sprite.SetActive(true); 
         textBoxAnim.SetTrigger("isOpen");
         spriteImage.sprite = sprites.Dequeue();
+        
         count++;
         yield return new WaitForSeconds(0.5f);
         dialogueText.gameObject.SetActive(true);
@@ -120,7 +121,7 @@ public class DialogueManager : MonoBehaviour
         }
         if (count > 1)
         {
-            spriteImage.sprite = sprites.Dequeue();
+            spriteImage.sprite = sprites.Dequeue(); 
         }
         count++;
         //Making local variables for the current sentence and name
@@ -154,17 +155,14 @@ public class DialogueManager : MonoBehaviour
 
         //Enable player controls
 
-        #region Turning off Animators in an Animation
-        yield return new WaitForSeconds(0.3f);
+        #region Turning off Animators in an Animation and Objects
+        dialogueText.gameObject.SetActive(false);
+        sprite.SetActive(false);
         textBoxAnim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.35f);
+        textBox.SetActive(false);
         #endregion
 
-        #region Turning off Game Objects
-        dialogueText.gameObject.SetActive(false);
-        textBox.SetActive(false);
-        sprite.SetActive(false);
-        #endregion
     }
     // Update is called once per frame
     void Update()

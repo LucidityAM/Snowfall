@@ -37,11 +37,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        float x = Input.GetAxisRaw("Horizontal");
+        if (isGrounded)
+        {
+            float x = Input.GetAxisRaw("Horizontal");
 
-        float moveBy = x * speed;
+            float moveBy = x * speed;
 
-        rb.velocity = new Vector2(moveBy, rb.velocity.y);
+            rb.velocity = new Vector2(moveBy, rb.velocity.y);
+        }
     }
 
     void Jump()

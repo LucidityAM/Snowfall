@@ -32,10 +32,6 @@ public class ScaryTransition : MonoBehaviour
 
         staticGO.SetActive(true);
 
-        yield return new WaitForSeconds(.1f);
-
-        chromaticGO.GetComponent<SpriteRenderer>().enabled = false;
-
         yield return new WaitForSeconds(4.5f);
 
         DissolveGO.SetActive(true);
@@ -43,10 +39,11 @@ public class ScaryTransition : MonoBehaviour
         yield return new WaitForSeconds(.2f);
 
         staticGO.SetActive(false);
-        chromaticGO.GetComponent<SpriteRenderer>().enabled = false;
 
         yield return new WaitForSeconds(2f);
-        
+
+        chromaticGO.GetComponent<SpriteRenderer>().enabled = false;
+
         Dissolve();
        
     }

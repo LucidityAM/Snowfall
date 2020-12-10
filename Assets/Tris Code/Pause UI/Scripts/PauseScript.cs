@@ -5,10 +5,8 @@ using UnityEngine;
 public class PauseScript : MonoBehaviour
 {
     public GameObject pauseBG;
-    //public GameObject blur;
 
     private Animator pauseBGAnim;
-    //private Animator blurAnim;
 
 
     #region Things that need to be turned off
@@ -31,7 +29,6 @@ public class PauseScript : MonoBehaviour
         playerMovement = player.GetComponent<PlayerMovement>();
         playerRB = player.GetComponent<Rigidbody2D>();
 
-        //blurAnim = blur.GetComponent<Animator>();
         #endregion
     }
     // Start is called before the first frame update
@@ -57,8 +54,6 @@ public class PauseScript : MonoBehaviour
     {
         paused = true;
         ToggleScripts();
-        //blur.SetActive(true);
-        //blurAnim.SetTrigger("IsOpen");
         yield return new WaitForSeconds(0.1f);
         pauseBG.SetActive(true);
         pauseBGAnim.SetBool("IsOpen", true);
@@ -69,10 +64,9 @@ public class PauseScript : MonoBehaviour
         paused = false;
         ToggleScripts();
         pauseBGAnim.SetBool("IsOpen", false);
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.2f);
         pauseBG.SetActive(false);
-        //blurAnim.SetTrigger("IsOpen");
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.1f);
     }
 
     public void ToggleScripts()

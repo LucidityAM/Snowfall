@@ -12,7 +12,9 @@ public class PauseScript : MonoBehaviour
 
 
     #region Things that need to be turned off
-    public PlayerMovement playerMovement;
+    public GameObject player;
+    private PlayerMovement playerMovement;
+    private Rigidbody2D playerRB;
     #endregion
 
     private bool paused;
@@ -24,14 +26,18 @@ public class PauseScript : MonoBehaviour
         pauseBG.SetActive(false);
         //blur.SetActive(false);
 
-        #region Animators
+        #region Components
         pauseBGAnim = pauseBG.GetComponent<Animator>();
+        playerMovement = player.GetComponent<PlayerMovement>();
+        playerRB = player.GetComponent<Rigidbody2D>();
+
         //blurAnim = blur.GetComponent<Animator>();
         #endregion
     }
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame
@@ -72,5 +78,14 @@ public class PauseScript : MonoBehaviour
     public void ToggleScripts()
     {
         playerMovement.enabled = !playerMovement.isActiveAndEnabled;
+        if (paused == true)
+        {
+            playerRB.velocity = new Vector3(0, 0, 0);
+            playerRB.bodyType = RigidbodyType2D.Static;
+        } else
+        {
+            playerRB.bodyType = RigidbodyType2D.Dynamic;
+        }
+
     }
 }

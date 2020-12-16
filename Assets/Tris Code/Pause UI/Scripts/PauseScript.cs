@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PauseScript : MonoBehaviour
 {
-    public GameObject pauseBG;
+    public GameObject fakepauseBG;
+    public GameObject realpauseBG;
 
-    private Animator pauseBGAnim;
+    private Animator fakepauseBGAnim;
+    private Animator realpauseBGAnim;
 
 
     #region Things that need to be turned off
@@ -20,12 +22,14 @@ public class PauseScript : MonoBehaviour
     void Awake()
     {
         paused = false;
+        PauseConditions.fakeside = true;
 
-        pauseBG.SetActive(false);
-        //blur.SetActive(false);
+        fakepauseBG.SetActive(false);
+        realpauseBG.SetActive(false);
 
         #region Components
-        pauseBGAnim = pauseBG.GetComponent<Animator>();
+        fakepauseBGAnim = fakepauseBG.GetComponent<Animator>();
+        realpauseBGAnim = realpauseBG.GetComponent<Animator>();
         playerMovement = player.GetComponent<PlayerMovement>();
         playerRB = player.GetComponent<Rigidbody2D>();
 
@@ -42,30 +46,70 @@ public class PauseScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && paused == false)
         {
-            StartCoroutine("OpenMenu");
+            if (PauseConditions.fakeside == true)
+            {
+                StartCoroutine("FakeOpenMenu");
+            }
+            else
+            {
+                StartCoroutine("RealOpenMenu");
+            }
         }
         else if(Input.GetKeyDown(KeyCode.Escape) && paused == true)
         {
-            StartCoroutine("CloseMenu");
+            if (PauseConditions.fakeside == true)
+            {
+                StartCoroutine("FakeCloseMenu");
+            }
+            else
+            {
+                StartCoroutine("RealOpenMenu");
+            }
         }
     }
 
-    public IEnumerator OpenMenu()
+    public void StartEnumerator(string name)
+    {
+        StopAllCoroutines();
+        StartCoroutine(name);
+    }
+
+    //OKOKOK listen.... I really messed up with the code for this one ok. I didnt think too much about implementation of the REAL UI until i got to that point.
+    //So I will now use 2 sets of 2 methods to do the exact same thing!
+    public IEnumerator FakeOpenMenu()
     {
         paused = true;
         ToggleScripts();
         yield return new WaitForSeconds(0.1f);
-        pauseBG.SetActive(true);
-        pauseBGAnim.SetBool("IsOpen", true);
+        fakepauseBG.SetActive(true);
+        fakepauseBGAnim.SetBool("IsOpen", true);
     }
 
-    public IEnumerator CloseMenu()
+    public IEnumerator FakeCloseMenu()
     {
         paused = false;
         ToggleScripts();
-        pauseBGAnim.SetBool("IsOpen", false);
+        fakepauseBGAnim.SetBool("IsOpen", false);
         yield return new WaitForSeconds(0.2f);
-        pauseBG.SetActive(false);
+        fakepauseBG.SetActive(false);
+        yield return new WaitForSeconds(0.1f);
+    }
+    public IEnumerator RealOpenMenu()
+    {
+        paused = true;
+        ToggleScripts();
+        yield return new WaitForSeconds(0.1f);
+        realpauseBG.SetActive(true);
+        realpauseBGAnim.SetBool("IsOpen", true);
+    }
+
+    public IEnumerator RealCloseMenu()
+    {
+        paused = false;
+        ToggleScripts();
+        realpauseBGAnim.SetBool("IsOpen", false);
+        yield return new WaitForSeconds(0.2f);
+        realpauseBG.SetActive(false);
         yield return new WaitForSeconds(0.1f);
     }
 

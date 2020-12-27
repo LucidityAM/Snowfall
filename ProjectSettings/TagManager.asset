@@ -8,6 +8,8 @@ TagManager:
   - Key Item
   - Action Controller
   - Snowball
+  - Fake
+  - Real
   layers:
   - Default
   - TransparentFX

@@ -512,7 +512,7 @@ PrefabInstance:
     - target: {fileID: 8223920885251510736, guid: e93b322fdab9107438d5ea450fecb2b0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: RealCloseGame
+      value: RealCloseMenu
       objectReference: {fileID: 0}
     - target: {fileID: 8329785455024983960, guid: e93b322fdab9107438d5ea450fecb2b0,
         type: 3}

@@ -117,6 +117,21 @@ PrefabInstance:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2138542559558033523, guid: d5a9b2bc618612741b4b070e4419c047,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -605.5156
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138542559558033523, guid: d5a9b2bc618612741b4b070e4419c047,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.8947754
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887378055553367517, guid: d5a9b2bc618612741b4b070e4419c047,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 2887378055553367518, guid: d5a9b2bc618612741b4b070e4419c047,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -126,6 +141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.699707
+      objectReference: {fileID: 0}
+    - target: {fileID: 2887378055832211684, guid: d5a9b2bc618612741b4b070e4419c047,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.60546875
       objectReference: {fileID: 0}
     - target: {fileID: 2887378056438694696, guid: d5a9b2bc618612741b4b070e4419c047,
         type: 3}

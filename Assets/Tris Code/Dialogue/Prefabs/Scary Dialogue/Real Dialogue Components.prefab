@@ -140,7 +140,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 100
+    m_FontSize: 120
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 0
@@ -301,6 +301,8 @@ MonoBehaviour:
   dialogueText: {fileID: 2887378055553367517}
   textBox: {fileID: 2887378055832211685}
   sprite: {fileID: 1092919783676831319}
+  player: {fileID: 0}
+  pause: {fileID: 0}
 --- !u!1 &3750822444001334088
 GameObject:
   m_ObjectHideFlags: 0

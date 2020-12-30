@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -210,10 +210,14 @@ Transform:
   m_GameObject: {fileID: 82449962}
   m_LocalRotation: {x: -0, y: -0, z: 0.3269472, w: 0.9450426}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -0.33049202, y: -0.15347528, z: 2.1715221}
 =======
   m_LocalPosition: {x: -0.12474251, y: -0.36086464, z: 2.1715221}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalPosition: {x: 0.0010757446, y: -0.05530715, z: 2.1715221}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 45570718}
@@ -244,10 +248,14 @@ Transform:
   m_GameObject: {fileID: 104363324}
   m_LocalRotation: {x: -0, y: -0, z: 0.9483603, w: -0.31719497}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 3.7183151, y: 4.460968, z: 0}
 =======
   m_LocalPosition: {x: 2.4436111, y: -1.5059586, z: 0}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalPosition: {x: 1.8594589, y: 1.4148102, z: 0}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 384393780}
@@ -793,20 +801,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455383726}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: 0.14119336, w: -0.989982}
 =======
   m_LocalRotation: {x: -0, y: -0, z: 0.10204282, w: -0.99478006}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalRotation: {x: -0, y: -0, z: 0.105909094, w: -0.9943758}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalPosition: {x: 0.888, y: -0.029, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1389240957}
   m_RootOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16.234001}
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -11.714001}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -12.159}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
 --- !u!1 &595268054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,20 +1161,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869441050}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: 0.89168084, w: 0.45266476}
 =======
   m_LocalRotation: {x: -0, y: -0, z: -0.067968935, w: 0.99768746}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalRotation: {x: -0, y: -0, z: 0.48343173, w: 0.8753821}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalPosition: {x: 0.509, y: -0.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1389240956}
   m_RootOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 126.170006}
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7.7950006}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 57.819004}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
 --- !u!1 &982452001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,20 +1207,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982452001}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0.892444, w: -0.45115831}
 =======
   m_LocalRotation: {x: -0, y: -0, z: -0.69929117, w: -0.71483696}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalRotation: {x: -0, y: -0, z: -0.72177655, w: -0.6921262}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalPosition: {x: 0.591, y: -0.025, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1389240953}
   m_RootOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -233.63599}
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -271.26}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -267.597}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
 --- !u!1 &1255853089
 GameObject:
   m_ObjectHideFlags: 0
@@ -1222,10 +1254,14 @@ Transform:
   m_GameObject: {fileID: 1255853089}
   m_LocalRotation: {x: -0, y: -0, z: -0.6988385, w: 0.7152795}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: 0.065071106, y: -0.20539093, z: 0}
 =======
   m_LocalPosition: {x: 0.8692322, y: -1.5590096, z: 0}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalPosition: {x: -0.38895416, y: -0.2109642, z: 0}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 301551407}
@@ -1242,10 +1278,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.64128214
 =======
       value: -0.01632264
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: -0.016322521
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: -5215791167466849201, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
@@ -1276,19 +1316,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.7197225
 =======
       value: 0.9284469
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.7191144
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: -4395165887718431692, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.69426185
 =======
       value: -0.37146512
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: -0.69489175
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: -4395165887718431692, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
@@ -1309,19 +1357,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.8486651
 =======
       value: 0.9965527
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.9962226
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: -3773319670236485771, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.52893066
 =======
       value: -0.08296312
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: -0.08683655
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: -3773319670236485771, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
@@ -1337,19 +1393,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.85249543
 =======
       value: -0.9953679
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: -0.85298526
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 352163930758539507, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.52273476
 =======
       value: -0.096139245
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: -0.5219349
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 406783645084260087, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
@@ -1360,19 +1424,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.6738194
 =======
       value: -0.024228083
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: -0.42944077
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 722512850825261182, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.73889613
 =======
       value: 0.99970645
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.903095
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 722512850825261182, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
@@ -1398,19 +1470,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.7311803
 =======
       value: 0.92029965
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.90264213
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 963424011896240363, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.6821843
 =======
       value: 0.3912144
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.43039194
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 4658727755536709114, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
@@ -1471,19 +1551,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: -0.7177983
 =======
       value: 0.019634904
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: -0.4881596
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 6645696871552673625, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
       propertyPath: m_LocalRotation.w
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.6962511
 =======
       value: 0.9998072
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.87275445
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 6645696871552673625, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
@@ -1504,14 +1592,19 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.z
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 0.54349434
 =======
       value: 0.0043845535
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.49172768
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     - target: {fileID: 8578118154532466459, guid: da0bba54c3de6084ca4b48870b618264,
         type: 3}
       propertyPath: m_LocalRotation.w
+<<<<<<< HEAD
 <<<<<<< HEAD
       value: 0.8394129
       objectReference: {fileID: 0}
@@ -1527,6 +1620,9 @@ PrefabInstance:
 =======
       value: 0.9999904
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+      value: 0.87074906
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -4906978411949052504, guid: da0bba54c3de6084ca4b48870b618264,
@@ -1844,10 +1940,14 @@ Transform:
   m_GameObject: {fileID: 1880523118}
   m_LocalRotation: {x: -0, y: -0, z: 0.6995208, w: -0.7146123}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalPosition: {x: -1.5632477, y: -0.31040955, z: 0}
 =======
   m_LocalPosition: {x: 0.38171387, y: -1.5364113, z: 0}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalPosition: {x: 0.51651, y: -1.9408264, z: 0}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 2093792918}
@@ -1877,20 +1977,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918454287}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0.026419904, w: 0.99965096}
 =======
   m_LocalRotation: {x: -0, y: -0, z: 0.08989748, w: 0.99595106}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalRotation: {x: -0, y: -0, z: 0.033154577, w: 0.99945027}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
   m_LocalPosition: {x: 0.766, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1389240951}
   m_RootOrder: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 356.972}
 =======
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 370.315}
 >>>>>>> b8c217d97cbae269aed031c46d0a3bb6cc9f18b9
+=======
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 363.8}
+>>>>>>> parent of b8c217d... Finished pause programming and implented alpha version of npc
 --- !u!1 &2038916966
 GameObject:
   m_ObjectHideFlags: 0

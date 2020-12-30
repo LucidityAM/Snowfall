@@ -23,9 +23,6 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private Queue<Sprite> sprites;
     private Queue<AudioClip> voices;
-
-    public GameObject player;
-    public GameObject pause;
     #endregion
 
     #region Condition Variables
@@ -91,7 +88,7 @@ public class DialogueManager : MonoBehaviour
             sprites.Enqueue(sprite);
         }
         voices.Clear();
-        foreach (AudioClip voice in dialogue.voices)
+        foreach(AudioClip voice in dialogue.voices)
         {
             voices.Enqueue(voice);
         }
@@ -103,20 +100,14 @@ public class DialogueManager : MonoBehaviour
 
         #region Animation For Opening The Dialogue
         textBox.SetActive(true);
-        sprite.SetActive(true);
+        sprite.SetActive(true); 
         textBoxAnim.SetTrigger("isOpen");
         spriteImage.sprite = sprites.Dequeue();
-
+        
         count++;
         yield return new WaitForSeconds(0.5f);
         dialogueText.gameObject.SetActive(true);
         DisplayNextSentence();
-        #endregion
-
-        #region turning off things that need to be turned off
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
-        pause.SetActive(false);
         #endregion
     }
 
@@ -172,18 +163,10 @@ public class DialogueManager : MonoBehaviour
         textBox.SetActive(false);
         #endregion
 
-        #region turning on things that need to be turned on
-        player.GetComponent<PlayerMovement>().enabled = true;
-        pause.SetActive(true);
-        #endregion
-
     }
     // Update is called once per frame
     void Update()
     {
-        if((isActive == true && Input.GetKeyDown(KeyCode.Space)) || (isActive == true && Input.GetKeyDown(KeyCode.Return)))
-        {
-            DisplayNextSentence();
-        }
+        
     }
 }

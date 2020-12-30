@@ -8,6 +8,7 @@ public class PauseScript : MonoBehaviour
     public GameObject realpauseBG;
 
     private Animator fakepauseBGAnim;
+    private Animator realpauseBGAnim;
 
 
     #region Things that need to be turned off
@@ -28,6 +29,7 @@ public class PauseScript : MonoBehaviour
 
         #region Components
         fakepauseBGAnim = fakepauseBG.GetComponent<Animator>();
+        realpauseBGAnim = realpauseBG.GetComponent<Animator>();
         playerMovement = player.GetComponent<PlayerMovement>();
         playerRB = player.GetComponent<Rigidbody2D>();
 
@@ -61,7 +63,7 @@ public class PauseScript : MonoBehaviour
             }
             else
             {
-                StartCoroutine("RealCloseMenu");
+                StartCoroutine("RealOpenMenu");
             }
         }
     }
@@ -98,12 +100,14 @@ public class PauseScript : MonoBehaviour
         ToggleScripts();
         yield return new WaitForSeconds(0.1f);
         realpauseBG.SetActive(true);
+        realpauseBGAnim.SetBool("IsOpen", true);
     }
 
     public IEnumerator RealCloseMenu()
     {
         paused = false;
         ToggleScripts();
+        realpauseBGAnim.SetBool("IsOpen", false);
         yield return new WaitForSeconds(0.2f);
         realpauseBG.SetActive(false);
         yield return new WaitForSeconds(0.1f);

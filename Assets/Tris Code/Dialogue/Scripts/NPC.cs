@@ -8,10 +8,15 @@ public class NPC : MonoBehaviour
     public GameObject prompt;
 
     private Animator promptAnim;
+
+    public bool promptopened;
+    public bool dialogueopened;
     // Start is called before the first frame update
     void Start()
     {
         promptAnim = prompt.GetComponent<Animator>();
+        promptopened = false;
+        dialogueopened = false;
     }
 
     // Update is called once per frame
@@ -30,6 +35,8 @@ public class NPC : MonoBehaviour
     {
         promptAnim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.4f);
+        promptopened = false;
+        dialogueopened = false;
         prompt.SetActive(false);
     }
 
@@ -44,10 +51,18 @@ public class NPC : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            StartCoroutine("OpenPromptDialogue");
+            if (promptopened == false)
+            {
+                StartCoroutine("OpenPromptDialogue");
+                promptopened = true;
+            }
             if (Input.GetKeyDown(KeyCode.L))
             {
-                dt.StartDialogue();
+                if (dialogueopened == false)
+                {
+                    dt.StartDialogue();
+                    dialogueopened = true;
+                }
             }
         }
     }

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: e3781abdb570e6b448e488977f16823f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Spooky Halloween
+  fontNames:
+  - Spooky Halloween
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e3f79b86fe1cebf48ab9883ce5f58d43, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

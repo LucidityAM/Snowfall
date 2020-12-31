@@ -6,6 +6,8 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public DialogueManager DM;
+
+    private bool isActive;
     // Start is called before the first frame update
     void Start()
     {

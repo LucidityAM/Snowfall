@@ -394,7 +394,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4868907514879307634}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1534182185631313184}
+        m_MethodName: Button2Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5990361373811490534
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +418,6 @@ GameObject:
   - component: {fileID: 7892744364103634463}
   - component: {fileID: 80336633143247374}
   - component: {fileID: 3995408921488671825}
-  - component: {fileID: 353702390610489622}
   - component: {fileID: 1779532785904065085}
   m_Layer: 5
   m_Name: Return To Game
@@ -527,21 +537,6 @@ MonoBehaviour:
           m_StringArgument: CloseMenu
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &353702390610489622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5990361373811490534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52854c67df97104c9fb59a4985f9696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bgBox: {fileID: 7088731320203827809}
-  smoothTimeY: 0.6
-  strength: 20
 --- !u!114 &1779532785904065085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,8 +554,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 353702390610489622}
-          m_MethodName: Open
+        - m_Target: {fileID: 1534182185631313184}
+          m_MethodName: Button1Open
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -661,6 +656,7 @@ GameObject:
   - component: {fileID: 9024446434107900723}
   - component: {fileID: 4347600858547732043}
   - component: {fileID: 2985969424884471321}
+  - component: {fileID: 1534182185631313184}
   m_Layer: 0
   m_Name: ButtonBG
   m_TagString: Untagged
@@ -724,3 +720,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1534182185631313184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7088731320203827809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52854c67df97104c9fb59a4985f9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smoothTimeY: 0.45
+  smoothTimeX: 0.45
+  button1: {fileID: 5990361373811490534}
+  button2: {fileID: 5619233754039048333}

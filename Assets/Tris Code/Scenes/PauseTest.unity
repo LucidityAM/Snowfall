@@ -792,6 +792,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31830ea1cfb42384eaa1fe1b584faf86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1431768827 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1455168347719476399, guid: 47691e4e99924ad4b9e9994d990c0874,
+    type: 3}
+  m_PrefabInstance: {fileID: 7390354261576655327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52854c67df97104c9fb59a4985f9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1549283348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1020,6 +1032,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1633828177}
   m_CullTransparentMesh: 0
+--- !u!1 &1911185967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5512632602447483138, guid: 47691e4e99924ad4b9e9994d990c0874,
+    type: 3}
+  m_PrefabInstance: {fileID: 7390354261576655327}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1911185972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1911185967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1431768827}
+          m_MethodName: Button2Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2081916194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,6 +1296,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1455168347719476399, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: strength
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455168347719476399, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: smoothTimeY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455168347719476399, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: smoothTimeX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3017874468260253337, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: player

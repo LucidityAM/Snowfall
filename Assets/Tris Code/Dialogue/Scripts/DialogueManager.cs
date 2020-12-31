@@ -29,7 +29,7 @@ public class DialogueManager : MonoBehaviour
     #endregion
 
     #region Condition Variables
-    private bool isActive;
+    public bool isActive;
     private bool endText;
     int count;
     #endregion
@@ -161,6 +161,7 @@ public class DialogueManager : MonoBehaviour
     {
         //Bool on so if anywhere else is still active, it will stop and go to endText
         endText = true;
+        isActive = false;
 
         //Enable player controls
 

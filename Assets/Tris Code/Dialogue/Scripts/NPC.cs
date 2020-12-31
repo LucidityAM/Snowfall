@@ -22,7 +22,22 @@ public class NPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (promptopened == true)
+        {
+            if (Input.GetKey(KeyCode.L))
+            {
+                if (dialogueopened == false)
+                {
+                    dt.StartDialogue();
+                    dialogueopened = true;
+                }
+            }
+        }
+
+        if(dt.DM.isActive == false)
+        {
+            dialogueopened = false;
+        }
     }
     public IEnumerator OpenPromptDialogue()
     {
@@ -55,14 +70,6 @@ public class NPC : MonoBehaviour
             {
                 StartCoroutine("OpenPromptDialogue");
                 promptopened = true;
-            }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                if (dialogueopened == false)
-                {
-                    dt.StartDialogue();
-                    dialogueopened = true;
-                }
             }
         }
     }

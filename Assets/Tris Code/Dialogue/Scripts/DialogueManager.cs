@@ -74,6 +74,12 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator StartDialogue(Dialogue dialogue)
     {
+        #region turning off things that need to be turned off
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
+        pause.SetActive(false);
+        #endregion
+
         endText = false;
         isActive = true;
         count = 0;
@@ -113,11 +119,6 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
         #endregion
 
-        #region turning off things that need to be turned off
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
-        pause.SetActive(false);
-        #endregion
     }
 
     public void DisplayNextSentence()

@@ -9,14 +9,27 @@ public class NPC : MonoBehaviour
 
     private Animator promptAnim;
 
-    public bool promptopened;
-    public bool dialogueopened;
+    private bool promptopened;
+    private bool dialogueopened;
+
+    private GameObject cam;
+
+    #region Camera Lerping Variables
+    public float Zoom1;
+    public float Zoom2;
+
+    public float duration;
+    private float elapsed = 0.0f;
+    private bool resetCam;
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
         promptAnim = prompt.GetComponent<Animator>();
         promptopened = false;
         dialogueopened = false;
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        resetCam = false;
     }
 
     // Update is called once per frame
@@ -30,14 +43,31 @@ public class NPC : MonoBehaviour
                 {
                     dt.StartDialogue();
                     dialogueopened = true;
+                    elapsed = 0.0f;
+                    elapsed += Time.deltaTime / duration;
+                    cam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(Zoom1, Zoom2, elapsed);
+                    cam.GetComponent<CameraScript>().enabled = false;
+                    cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y - 1f, cam.transform.position.z);
+                    resetCam = true;
+                }
+            }
+
+            if (dt.DM.isActive == false)
+            {
+                dialogueopened = false;
+                elapsed = 0.0f;
+                elapsed += Time.deltaTime / duration;
+                cam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(Zoom2, Zoom1, elapsed);
+                cam.GetComponent<CameraScript>().enabled = true;
+                
+                if(resetCam == true)
+                {
+                    cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + 1f, cam.transform.position.z);
+                    resetCam = false;
                 }
             }
         }
 
-        if(dt.DM.isActive == false)
-        {
-            dialogueopened = false;
-        }
     }
     public IEnumerator OpenPromptDialogue()
     {

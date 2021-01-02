@@ -17,7 +17,7 @@ public class DialogueTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-     
+        isActive = DM.isActive;
     }
 
     public void StartDialogue()

@@ -99,7 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dt: {fileID: 6516246087802518805}
   prompt: {fileID: 5511742093919660842}
-  opened: 0
+  promptopened: 0
+  dialogueopened: 0
+  Zoom1: 5
+  Zoom2: 2
+  ypos1: 0
+  ypos2: 0
+  duration: 1
 --- !u!114 &6516246087802518805
 MonoBehaviour:
   m_ObjectHideFlags: 0

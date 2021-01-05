@@ -484,12 +484,17 @@ PrefabInstance:
     - target: {fileID: 7586504767572193197, guid: 6fc57e126a7dfb24dbb9cb1fb322f86d,
         type: 3}
       propertyPath: Zoom1
-      value: 100
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7586504767572193197, guid: 6fc57e126a7dfb24dbb9cb1fb322f86d,
         type: 3}
       propertyPath: Zoom2
-      value: 0.2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586504767572193197, guid: 6fc57e126a7dfb24dbb9cb1fb322f86d,
+        type: 3}
+      propertyPath: duration
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fc57e126a7dfb24dbb9cb1fb322f86d, type: 3}

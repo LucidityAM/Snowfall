@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092919783676831319}
   m_LocalRotation: {x: -0, y: 0, z: 0.0000018645078, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: -3768.323}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2887378055832211684}
@@ -303,6 +303,7 @@ MonoBehaviour:
   sprite: {fileID: 1092919783676831319}
   player: {fileID: 0}
   pause: {fileID: 0}
+  isActive: 0
 --- !u!1 &3750822444001334088
 GameObject:
   m_ObjectHideFlags: 0

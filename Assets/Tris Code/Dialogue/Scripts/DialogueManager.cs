@@ -30,7 +30,8 @@ public class DialogueManager : MonoBehaviour
 
     #region Condition Variables
     public bool isActive;
-    private bool endText;
+    public bool endText;
+    private bool startText;
     int count;
     #endregion
     
@@ -55,7 +56,8 @@ public class DialogueManager : MonoBehaviour
     {
         #region Resetting Variables
         isActive = false;
-        endText = false;
+        endText = true;
+        startText = false;
         count = 0;
         #endregion
 
@@ -82,6 +84,7 @@ public class DialogueManager : MonoBehaviour
 
         endText = false;
         isActive = true;
+        startText = true;
         count = 0;
         //Player disabling happpens here
 
@@ -117,6 +120,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         dialogueText.gameObject.SetActive(true);
         DisplayNextSentence();
+        startText = false;
         #endregion
 
     }
@@ -183,7 +187,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if((isActive == true && Input.GetKeyDown(KeyCode.Space)) || (isActive == true && Input.GetKeyDown(KeyCode.Return)))
+        if( ((isActive == true && Input.GetKeyDown(KeyCode.Space)) || (isActive == true && Input.GetKeyDown(KeyCode.Return))) && startText == false)
         {
             DisplayNextSentence();
         }

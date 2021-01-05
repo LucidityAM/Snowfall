@@ -15,13 +15,15 @@ public class NPC : MonoBehaviour
     private GameObject cam;
 
     #region Camera Lerping Variables
-    public float Zoom1;
-    public float Zoom2;
+    public NPCCamera npcCam;
+    public float normalSize;
+    public float zoomedSize;
 
     public float duration;
     private float elapsed = 0.0f;
     private bool resetCam;
     #endregion
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,17 +39,15 @@ public class NPC : MonoBehaviour
     {
         if (promptopened == true)
         {
-            if (Input.GetKey(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.L))
             {
                 if (dialogueopened == false)
                 {
-                    dt.StartDialogue();
                     dialogueopened = true;
-                    elapsed = 0.0f;
-                    elapsed += Time.deltaTime / duration;
-                    cam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(Zoom1, Zoom2, elapsed);
+                    dt.StartDialogue();
                     cam.GetComponent<CameraScript>().enabled = false;
-                    cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y - 1f, cam.transform.position.z);
+                    npcCam.StartCoroutine("FindMidpoint");
+                    StartCoroutine(ChangeSize(normalSize, zoomedSize));
                     resetCam = true;
                 }
             }
@@ -55,19 +55,16 @@ public class NPC : MonoBehaviour
             if (dt.DM.isActive == false)
             {
                 dialogueopened = false;
-                elapsed = 0.0f;
-                elapsed += Time.deltaTime / duration;
-                cam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(Zoom2, Zoom1, elapsed);
-                cam.GetComponent<CameraScript>().enabled = true;
-                
-                if(resetCam == true)
+                if (resetCam == true)
                 {
-                    cam.transform.position = new Vector3(cam.transform.position.x, cam.transform.position.y + 1f, cam.transform.position.z);
+                    cam.GetComponent<CameraScript>().enabled = true;
+                    npcCam.StartCoroutine("ResetCamera");
+                    StartCoroutine(ChangeSize(zoomedSize, normalSize));
                     resetCam = false;
                 }
+                cam.GetComponent<CameraScript>().enabled = true;
             }
         }
-
     }
     public IEnumerator OpenPromptDialogue()
     {
@@ -101,6 +98,18 @@ public class NPC : MonoBehaviour
                 StartCoroutine("OpenPromptDialogue");
                 promptopened = true;
             }
+        }
+    }
+
+    IEnumerator ChangeSize(float Zoom1, float Zoom2)
+    {
+        float timeElapsed = 0f;
+
+        while(timeElapsed <= duration)
+        {
+            cam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(Zoom1, Zoom2, timeElapsed / duration);
+            timeElapsed += Time.deltaTime;
+            yield return null;
         }
     }
 

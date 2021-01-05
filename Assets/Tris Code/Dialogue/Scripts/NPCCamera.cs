@@ -22,29 +22,34 @@ public class NPCCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        midpoint = new Vector3(player.transform.position.x + (transform.position.x - player.transform.position.x) / 2, cam.transform.position.y -1.5f, cam.transform.position.z);
-        originalPos = new Vector3(player.transform.position.x, cam.transform.position.y + 1.5f, cam.transform.position.z);
+        // midpoint = new Vector3(player.transform.position.x + (transform.position.x - player.transform.position.x) / 2, cam.transform.position.y, cam.transform.position.z);
+        // originalPos = new Vector3(player.transform.position.x, cam.transform.position.y, cam.transform.position.z);
     }
 
-    public void FindMidpoint()
+    public IEnumerator FindMidpoint()
     { 
         float timeElapsed = 0.0f;
+        midpoint = new Vector3(player.transform.position.x + (transform.position.x - player.transform.position.x) / 2, cam.transform.position.y - 2f, cam.transform.position.z);
 
-        while (timeElapsed < duration)
+        while (timeElapsed <= duration)
         {
-            cam.transform.position = Vector3.Lerp(midpoint, cam.transform.position, timeElapsed / duration);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, midpoint, timeElapsed / duration);
             timeElapsed += Time.deltaTime;
+            yield return null;
         }
     }
 
-    public void ResetCamera()
+    public IEnumerator ResetCamera()
     {
         float timeElapsed = 0.0f;
+        originalPos = new Vector3(player.transform.position.x, cam.transform.position.y + 2f, cam.transform.position.z);
 
-        while(timeElapsed < duration)
+        while (timeElapsed <= duration)
         {
-            cam.transform.position = Vector3.Lerp(originalPos, cam.transform.position, timeElapsed / duration);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, originalPos, timeElapsed / duration);
             timeElapsed += Time.deltaTime;
+            yield return null;
         }
     }
+
 }

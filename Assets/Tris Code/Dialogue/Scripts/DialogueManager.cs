@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
 
     #region Condition Variables
     public bool isActive;
-    private bool endText;
+    public bool endText;
     private bool startText;
     int count;
     #endregion
@@ -56,7 +56,7 @@ public class DialogueManager : MonoBehaviour
     {
         #region Resetting Variables
         isActive = false;
-        endText = false;
+        endText = true;
         startText = false;
         count = 0;
         #endregion

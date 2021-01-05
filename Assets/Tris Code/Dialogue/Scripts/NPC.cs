@@ -46,7 +46,7 @@ public class NPC : MonoBehaviour
                     dialogueopened = true;
                     dt.StartDialogue();
                     cam.GetComponent<CameraScript>().enabled = false;
-                    npcCam.FindMidpoint();
+                    npcCam.StartCoroutine("FindMidpoint");
                     StartCoroutine(ChangeSize(normalSize, zoomedSize));
                     resetCam = true;
                 }
@@ -55,16 +55,16 @@ public class NPC : MonoBehaviour
             if (dt.DM.isActive == false)
             {
                 dialogueopened = false;
-                cam.GetComponent<CameraScript>().enabled = true;
                 if (resetCam == true)
                 {
-                    npcCam.ResetCamera();
+                    cam.GetComponent<CameraScript>().enabled = true;
+                    npcCam.StartCoroutine("ResetCamera");
                     StartCoroutine(ChangeSize(zoomedSize, normalSize));
                     resetCam = false;
                 }
+                cam.GetComponent<CameraScript>().enabled = true;
             }
         }
-
     }
     public IEnumerator OpenPromptDialogue()
     {
@@ -105,7 +105,7 @@ public class NPC : MonoBehaviour
     {
         float timeElapsed = 0f;
 
-        while(timeElapsed < duration)
+        while(timeElapsed <= duration)
         {
             cam.GetComponent<Camera>().orthographicSize = Mathf.Lerp(Zoom1, Zoom2, timeElapsed / duration);
             timeElapsed += Time.deltaTime;

@@ -23,8 +23,6 @@ public class NPCCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // midpoint = new Vector3(player.transform.position.x + (transform.position.x - player.transform.position.x) / 2, cam.transform.position.y, cam.transform.position.z);
-        // originalPos = new Vector3(player.transform.position.x, cam.transform.position.y, cam.transform.position.z);
     }
 
     public IEnumerator FindMidpoint()

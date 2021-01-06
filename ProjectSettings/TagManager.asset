@@ -8,6 +8,9 @@ TagManager:
   - Key Item
   - Action Controller
   - Snowball
+  - Fake
+  - Real
+  - NPC
   layers:
   - Default
   - TransparentFX

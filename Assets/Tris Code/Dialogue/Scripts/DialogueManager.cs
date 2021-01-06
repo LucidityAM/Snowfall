@@ -80,13 +80,12 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
         pause.SetActive(false);
-        #endregion
-
+        SetNPCsActive(false);
         endText = false;
         isActive = true;
         startText = true;
         count = 0;
-        //Player disabling happpens here
+        #endregion
 
         #region Setting Up Queues. Turning Arrays > Queues
         sentences.Clear();
@@ -181,15 +180,32 @@ public class DialogueManager : MonoBehaviour
         #region turning on things that need to be turned on
         player.GetComponent<PlayerMovement>().enabled = true;
         pause.SetActive(true);
+        SetNPCsActive(true);
         #endregion
 
     }
     // Update is called once per frame
     void Update()
     {
-        if( ((isActive == true && Input.GetKeyDown(KeyCode.Space)) || (isActive == true && Input.GetKeyDown(KeyCode.Return))) && startText == false)
+        if( ((isActive == true && Input.GetKeyDown(KeyCode.Space)) || (isActive == true && Input.GetKeyDown(KeyCode.Return))
+            || (isActive == true && Input.GetKeyDown(KeyCode.F))) && startText == false)
         {
             DisplayNextSentence();
+        }
+    }
+
+    public void SetNPCsActive(bool toggle)
+    {
+        GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC");
+        NPC[] npcScripts = new NPC[npcs.Length];
+        for(int i = 0; i < npcs.Length; i++)
+        {
+            npcScripts[i] = npcs[i].GetComponent<NPC>();
+        }
+
+        foreach(NPC script in npcScripts)
+        {
+            script.enabled = toggle;
         }
     }
 }

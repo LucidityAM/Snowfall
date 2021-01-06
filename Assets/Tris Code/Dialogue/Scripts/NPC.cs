@@ -39,7 +39,7 @@ public class NPC : MonoBehaviour
     {
         if (promptopened == true)
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 if (dialogueopened == false)
                 {

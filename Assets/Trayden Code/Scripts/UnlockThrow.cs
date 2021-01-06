@@ -27,11 +27,11 @@ public class UnlockThrow : MonoBehaviour
             }
             else
             {
-                //Camera becomes resaturated here
                 foreach(GameObject keyItem in keyItems)
                 {
                     //GameObject lighting gets disabled here
                 }
+                //Camera becomes resaturated here
                 gameObject.GetComponent<SnowballThrow>().enabled = false;
             }
         }

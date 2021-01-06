@@ -21,7 +21,7 @@ public class KeyItemActionTrigger : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!collision.gameObject.CompareTag("Snowball"))
+        if(collision.gameObject.CompareTag("Key Item"))
         {
             gameobjectName = collision.gameObject.name.ToString();
             ActionController.GetComponent<KeyItemActionList>().StartCoroutine(gameobjectName + "Action");

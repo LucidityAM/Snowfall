@@ -23,7 +23,7 @@ public class SnowballThrow : MonoBehaviour
             if(hit.collider.CompareTag("Key Item"))
             {
                 keyItem = hit.collider.gameObject;
-                Instantiate(snowballProjectile, new Vector3(player.transform.position.x + .75f, player.transform.position.y, 0), Quaternion.identity);
+                Instantiate(snowballProjectile, new Vector3(player.transform.position.x + .75f, player.transform.position.y + 2f, 0), Quaternion.identity);
                 gameObject.GetComponent<UnlockThrow>().isActive = false;
                 gameObject.GetComponent<SnowballThrow>().enabled = false;
             }

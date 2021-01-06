@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    Rigidbody2D rb;
 
     public float speed;
     public float jumpForce;
@@ -21,9 +20,16 @@ public class PlayerMovement : MonoBehaviour
     public float rememberGroundedFor;
     float lastTimeGrounded;
 
+    //Components
+    Rigidbody2D rb;
+    Animator anim;
+    AudioSource audioSrc;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        audioSrc = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -32,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         Jump();
         BetterJump();
         CheckIfGrounded();
+
+        anim.SetFloat("walkSpeed", Mathf.Abs(rb.velocity.x));
     }
 
 
@@ -40,20 +48,61 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             float x = Input.GetAxisRaw("Horizontal");
-
             float moveBy = x * speed;
-
             rb.velocity = new Vector2(moveBy, rb.velocity.y);
+
+            if (rb.velocity.x >= 0)
+            {
+                this.gameObject.transform.rotation = Quaternion.Euler(0,180,0);
+            }
+            else if (rb.velocity.x < 0)
+            {
+                this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else if (rb.velocity.x == 0)
+            {
+                this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+
+            if (Mathf.Abs(rb.velocity.x) != 0 && isGrounded)
+            {
+                anim.speed = Mathf.Abs(rb.velocity.x) * .32f;
+            }
+            else if (isGrounded == false)
+            {
+                anim.speed = 0.6f;
+            }//Scales animation speed with the walk speed;
+
+            if (rb.velocity.x != 0)
+            {
+                if (!audioSrc.isPlaying)
+                    audioSrc.Play();
+            }
+            else
+            {
+                audioSrc.Stop();
+            }//Plays the sound of walking if the player is walking
+
         }
     }
 
     void Jump()
     {
+        if (isGrounded)
+        {
+            anim.SetBool("inJump", false);
+        }
+        else
+        {
+            anim.SetBool("inJump", true);
+        }
+
         if (Input.GetKeyDown(KeyCode.Space) && (isGrounded || Time.time - lastTimeGrounded <= rememberGroundedFor))
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-    }
+ 
+    }//Checks if the player is grounded or if they were grounded in the last couple miliseconds and then jumps
 
     void BetterJump()
     {
@@ -84,4 +133,6 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = false;
         }
     }
+
+
 }

@@ -308,7 +308,7 @@ MonoBehaviour:
   prompt: {fileID: 6841928807577682922}
   npcCam: {fileID: 4165819448129701984}
   normalSize: 5
-  zoomedSize: 2.5
+  zoomedSize: 3
   duration: 1
 --- !u!114 &4165819448129701984
 MonoBehaviour:
@@ -323,6 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
+  boost: -1
 --- !u!114 &5251361481030063573
 MonoBehaviour:
   m_ObjectHideFlags: 0

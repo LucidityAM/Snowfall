@@ -8,6 +8,7 @@ public class NPCCamera : MonoBehaviour
     private GameObject player;
 
     public float duration;
+    public float boost;
 
     private Vector3 midpoint;
     private Vector3 originalPos;
@@ -29,7 +30,7 @@ public class NPCCamera : MonoBehaviour
     public IEnumerator FindMidpoint()
     { 
         float timeElapsed = 0.0f;
-        midpoint = new Vector3(player.transform.position.x + (transform.position.x - player.transform.position.x) / 2, cam.transform.position.y - 2f, cam.transform.position.z);
+        midpoint = new Vector3(player.transform.position.x + (transform.position.x - player.transform.position.x) / 2, cam.transform.position.y + boost, cam.transform.position.z);
 
         while (timeElapsed <= duration)
         {
@@ -42,7 +43,7 @@ public class NPCCamera : MonoBehaviour
     public IEnumerator ResetCamera()
     {
         float timeElapsed = 0.0f;
-        originalPos = new Vector3(player.transform.position.x, cam.transform.position.y + 2f, cam.transform.position.z);
+        originalPos = new Vector3(player.transform.position.x, cam.transform.position.y - boost, cam.transform.position.z);
 
         while (timeElapsed <= duration)
         {

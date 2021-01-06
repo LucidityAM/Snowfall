@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e3781abdb570e6b448e488977f16823f
+guid: 92e3949dc849a0d4994eeaa3ca5a094a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,11 +8,10 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Spooky Halloween
+  fontName: Magic Mushroom
   fontNames:
-  - Spooky Halloween
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: e3f79b86fe1cebf48ab9883ce5f58d43, type: 3}
+  - Magic Mushroom
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

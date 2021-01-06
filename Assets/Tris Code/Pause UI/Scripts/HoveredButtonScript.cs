@@ -35,13 +35,13 @@ public class HoveredButtonScript : MonoBehaviour
 
         if (onButton1 == true)
         {
-            transform.position = new Vector3(posX1, posY1, transform.position.z);
+            transform.position = new Vector3(transform.position.x, posY1, transform.position.z);
             onButton2 = false;
         } 
         
         if (onButton2 == true)
         {
-            transform.position = new Vector3(posX2, posY2, transform.position.z);
+            transform.position = new Vector3(transform.position.x, posY2, transform.position.z);
             onButton1 = false;
         }
     }

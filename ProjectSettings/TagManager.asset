@@ -22,8 +22,8 @@ TagManager:
   - 
   - Effects
   - Floor
-  - 
-  - 
+  - KeyItem
+  - PostProcessing
   - 
   - 
   - 
@@ -47,4 +47,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 1926461837
+    locked: 0
+  - name: KeyItem
+    uniqueID: 551063343
     locked: 0

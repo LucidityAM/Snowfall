@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
-  boost: -1
+  boost: 0
 --- !u!114 &5251361481030063573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -339,13 +339,11 @@ MonoBehaviour:
   dialogue:
     sentences:
     - '"There''s a great spot over by the town''s square. There''s an allyway, in-between
-      the bakery and the toy shop, where--"
-
-'
+      the bakery and the toy shop, where--"'
     - '"Lucas! That''s OUR hiding spot!"'
     - " \"Oh, right, right. Sorry, Flores. I...uh, don't know of any spots. anywhere!
       Haven't seen one! What are you talking about?\"\r"
-    - " \"Why did I let you be on my team?\" \r\n"
+    - " \"Why did I let you be on my team?\" \r"
     sprites:
     - {fileID: 21300000, guid: 94a807fcb1220eb4ea02cdb5a3c2c8b0, type: 3}
     - {fileID: 21300000, guid: 94a807fcb1220eb4ea02cdb5a3c2c8b0, type: 3}

@@ -26,6 +26,8 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject player;
     public GameObject pause;
+
+    private Animator playerAnim;
     #endregion
 
     #region Condition Variables
@@ -41,7 +43,8 @@ public class DialogueManager : MonoBehaviour
         #region Getting All Private Components
         textBoxAnim = textBox.GetComponent<Animator>();
         spriteAnim = sprite.GetComponent<Animator>();
-        spriteImage = sprite.GetComponent<Image>(); 
+        spriteImage = sprite.GetComponent<Image>();
+        playerAnim = player.GetComponent<Animator>();
         #endregion
 
         #region Turning Off All Components
@@ -79,6 +82,8 @@ public class DialogueManager : MonoBehaviour
         #region turning off things that need to be turned off
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
+        playerAnim.SetFloat("walkSpeed", 0);
+        playerAnim.SetBool("inJump", false);
         pause.SetActive(false);
         SetNPCsActive(false);
         endText = false;

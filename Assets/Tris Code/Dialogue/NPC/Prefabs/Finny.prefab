@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
-  boost: -1
+  boost: -0.4
 --- !u!114 &7092673881989142877
 MonoBehaviour:
   m_ObjectHideFlags: 0

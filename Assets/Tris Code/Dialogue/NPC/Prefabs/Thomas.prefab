@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 1
-  boost: -1
+  boost: 0.2
 --- !u!114 &7438781106575410414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,12 +338,8 @@ MonoBehaviour:
   dialogue:
     sentences:
     - '"Maybe you should hide in the black forest. I mean, unless you''re a huge
-      baby."
-
-'
-    - '"I''m not a baby! Mom says not to go in there, ever!"
-
-'
+      baby."'
+    - '"I''m not a baby! Mom says not to go in there, ever!"'
     - ' "Well if you''re scared of a forest maybe this snowball war is too scary
       for you, too. You should just go back to your Mommy!"'
     sprites:

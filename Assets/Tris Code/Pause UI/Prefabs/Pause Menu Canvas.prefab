@@ -290,6 +290,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fake Dialogue UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4280781552125176981, guid: 30ecdcb3b61d8ba478a6c936c5cb2890,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4478504346198626287, guid: 30ecdcb3b61d8ba478a6c936c5cb2890,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -298,7 +303,12 @@ PrefabInstance:
     - target: {fileID: 4602534881069861604, guid: 30ecdcb3b61d8ba478a6c936c5cb2890,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.38378906
+      value: 0.33466
+      objectReference: {fileID: 0}
+    - target: {fileID: 4602534881069861604, guid: 30ecdcb3b61d8ba478a6c936c5cb2890,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.2253
       objectReference: {fileID: 0}
     - target: {fileID: 5251902625686874516, guid: 30ecdcb3b61d8ba478a6c936c5cb2890,
         type: 3}
@@ -418,6 +428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Real Dialogue UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3287470575401797556, guid: e93b322fdab9107438d5ea450fecb2b0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5307781377093790020, guid: e93b322fdab9107438d5ea450fecb2b0,
         type: 3}

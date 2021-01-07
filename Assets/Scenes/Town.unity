@@ -6859,7 +6859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &979547400
 Transform:
   m_ObjectHideFlags: 0
@@ -7948,7 +7948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyItems: []
-  isActive: 1
+  isActive: 0
   lights:
   - {fileID: 979547399}
   monochrome: {fileID: 1676159059}
@@ -8504,7 +8504,7 @@ PrefabInstance:
     - target: {fileID: 322375730693206836, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -605.5157
+      value: -605.51575
       objectReference: {fileID: 0}
     - target: {fileID: 3586810541955829864, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda,
         type: 3}

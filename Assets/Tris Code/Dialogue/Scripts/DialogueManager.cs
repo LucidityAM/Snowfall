@@ -14,7 +14,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject textBox;
     public GameObject sprite;
 
-    //private Animator Variables
+    // Animator Variables
     private Animator textBoxAnim;
     private Animator spriteAnim;
     private Image spriteImage;
@@ -82,6 +82,7 @@ public class DialogueManager : MonoBehaviour
         #region turning off things that need to be turned off
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
+        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         playerAnim.SetFloat("walkSpeed", 0);
         playerAnim.SetBool("inJump", false);
         pause.SetActive(false);
@@ -162,6 +163,7 @@ public class DialogueManager : MonoBehaviour
                 //StartCoroutine("EndDialogue");
             }
             dialogueText.text += letter;
+            yield return new WaitForSeconds(0.005f);
             yield return null;
         }
     }
@@ -184,6 +186,7 @@ public class DialogueManager : MonoBehaviour
 
         #region turning on things that need to be turned on
         player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         pause.SetActive(true);
         SetNPCsActive(true);
         #endregion

@@ -14,6 +14,7 @@ public class PauseScript : MonoBehaviour
     public GameObject player;
     private PlayerMovement playerMovement;
     private Rigidbody2D playerRB;
+    private Animator playerAnim;
     #endregion
 
     private bool paused;
@@ -30,7 +31,7 @@ public class PauseScript : MonoBehaviour
         fakepauseBGAnim = fakepauseBG.GetComponent<Animator>();
         playerMovement = player.GetComponent<PlayerMovement>();
         playerRB = player.GetComponent<Rigidbody2D>();
-
+        playerAnim = player.GetComponent<Animator>();
         #endregion
     }
     // Start is called before the first frame update
@@ -112,6 +113,7 @@ public class PauseScript : MonoBehaviour
     public void ToggleScripts()
     {
         playerMovement.enabled = !playerMovement.isActiveAndEnabled;
+        playerAnim.enabled = !playerAnim.enabled;
         if (paused == true)
         {
             playerRB.velocity = new Vector3(0, 0, 0);
@@ -120,6 +122,19 @@ public class PauseScript : MonoBehaviour
         {
             playerRB.bodyType = RigidbodyType2D.Dynamic;
         }
+    
+        GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC Idle");
+        Animator[] npcScripts = new Animator[npcs.Length];
+        for(int i = 0; i < npcs.Length; i++)
+        {
+            npcScripts[i] = npcs[i].GetComponent<Animator>();
+        }
+
+        foreach(Animator anim in npcScripts)
+        {
+            anim.enabled = !anim.enabled;
+        }
+    
 
     }
 }

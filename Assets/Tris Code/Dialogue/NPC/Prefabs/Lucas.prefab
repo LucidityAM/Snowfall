@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5398711075022244203}
   m_Layer: 0
   m_Name: Lucas idle (2)_0
-  m_TagString: Untagged
+  m_TagString: NPC Idle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,7 +115,7 @@ GameObject:
   - component: {fileID: 3976925474407101624}
   m_Layer: 0
   m_Name: spritesheet (2)_0
-  m_TagString: Untagged
+  m_TagString: NPC Idle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -345,10 +345,10 @@ MonoBehaviour:
       Haven't seen one! What are you talking about?\"\r"
     - " \"Why did I let you be on my team?\" \r"
     sprites:
-    - {fileID: 21300000, guid: 94a807fcb1220eb4ea02cdb5a3c2c8b0, type: 3}
-    - {fileID: 21300000, guid: 94a807fcb1220eb4ea02cdb5a3c2c8b0, type: 3}
-    - {fileID: 21300000, guid: 94a807fcb1220eb4ea02cdb5a3c2c8b0, type: 3}
-    - {fileID: 21300000, guid: 94a807fcb1220eb4ea02cdb5a3c2c8b0, type: 3}
+    - {fileID: 21300000, guid: 7ab5aecc5de4ed84bbc1c00a6f7ca706, type: 3}
+    - {fileID: 21300000, guid: 7a8dabc0890336549bc1a12815f255fe, type: 3}
+    - {fileID: 21300000, guid: 7ab5aecc5de4ed84bbc1c00a6f7ca706, type: 3}
+    - {fileID: 21300000, guid: 7a8dabc0890336549bc1a12815f255fe, type: 3}
     voices: []
   DM: {fileID: 0}
 --- !u!61 &7663589516286394432
@@ -364,7 +364,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04701996, y: 0.033504486}
+  m_Offset: {x: -0.45083237, y: 0.033504486}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -375,7 +375,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.263056, y: 2.0897431}
+  m_Size: {x: 5.96216, y: 2.0897431}
   m_EdgeRadius: 0
 --- !u!95 &5552598015852439024
 Animator:

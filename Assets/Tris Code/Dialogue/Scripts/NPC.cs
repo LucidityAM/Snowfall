@@ -54,15 +54,13 @@ public class NPC : MonoBehaviour
 
             if (dt.DM.isActive == false)
             {
-                dialogueopened = false;
+                //dialogueopened = false;
                 if (resetCam == true)
                 {
-                    cam.GetComponent<CameraScript>().enabled = true;
-                    npcCam.StartCoroutine("ResetCamera");
-                    StartCoroutine(ChangeSize(zoomedSize, normalSize));
+                    StartCoroutine("UpdateCamera");
                     resetCam = false;
                 }
-                cam.GetComponent<CameraScript>().enabled = true;
+                //cam.GetComponent<CameraScript>().enabled = true;
             }
         }
     }
@@ -78,7 +76,6 @@ public class NPC : MonoBehaviour
         promptAnim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.4f);
         promptopened = false;
-        dialogueopened = false;
         prompt.SetActive(false);
     }
 
@@ -113,4 +110,12 @@ public class NPC : MonoBehaviour
         }
     }
 
+    IEnumerator UpdateCamera()
+    {
+        cam.GetComponent<CameraScript>().enabled = true;
+        npcCam.StartCoroutine("ResetCamera");
+        StartCoroutine(ChangeSize(zoomedSize, normalSize));
+        yield return new WaitForSeconds(2f);
+        dialogueopened = false;
+    }
 }

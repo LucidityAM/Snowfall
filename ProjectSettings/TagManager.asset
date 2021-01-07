@@ -11,6 +11,7 @@ TagManager:
   - Fake
   - Real
   - NPC
+  - NPC Idle
   layers:
   - Default
   - TransparentFX
@@ -53,4 +54,7 @@ TagManager:
     locked: 0
   - name: KeyItem
     uniqueID: 551063343
+    locked: 0
+  - name: Dialogue UI
+    uniqueID: 1848295169
     locked: 0

@@ -6,6 +6,11 @@ public class UnlockThrow : MonoBehaviour
 {
     public GameObject[] keyItems;
     public bool isActive = false;
+
+    public GameObject[] lights = new GameObject[10];
+
+    public GameObject monochrome;
+
     void Start()
     {
         keyItems = GameObject.FindGameObjectsWithTag("Key Item");
@@ -16,24 +21,34 @@ public class UnlockThrow : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftControl))
         {
             isActive = !isActive;
-            if(isActive == true)
+            if(isActive)
             {
-                //Camera becomes monochromatic here
+                monochrome.SetActive(true);
+
                 foreach(GameObject keyItem in keyItems)
                 {
-                    //GameObject lighting gets activated here
+                    foreach(GameObject lights in lights)
+                    {
+                        lights.SetActive(true);
+                    }
                 }
                 gameObject.GetComponent<SnowballThrow>().enabled = true;
             }
-            else
+            
+        }
+
+        if(isActive == false)
+        {
+            foreach (GameObject keyItem in keyItems)
             {
-                foreach(GameObject keyItem in keyItems)
+                foreach (GameObject lights in lights)
                 {
-                    //GameObject lighting gets disabled here
+                    lights.SetActive(false);
                 }
-                //Camera becomes resaturated here
-                gameObject.GetComponent<SnowballThrow>().enabled = false;
             }
+            monochrome.SetActive(false);
+
+            gameObject.GetComponent<SnowballThrow>().enabled = false;
         }
     }
 }

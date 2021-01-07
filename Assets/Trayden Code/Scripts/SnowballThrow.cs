@@ -9,6 +9,7 @@ public class SnowballThrow : MonoBehaviour
     public GameObject snowballProjectile;
     public GameObject player;
     public GameObject keyItem;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -16,8 +17,9 @@ public class SnowballThrow : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
-        {
+        if (Input.GetMouseButtonDown(0))
+        { 
+
             worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             hit = Physics2D.Raycast(worldPoint, Vector2.zero);
             if(hit.collider.CompareTag("Key Item"))

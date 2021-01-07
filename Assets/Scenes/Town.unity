@@ -7602,16 +7602,7 @@ MonoBehaviour:
   keyItems: []
   isActive: 1
   lights:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 979547399}
   monochrome: {fileID: 1676159059}
 --- !u!1 &1479637532
 GameObject:

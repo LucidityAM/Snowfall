@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1926461837
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_Sprite: {fileID: 5934947301360430944, guid: dfee41b16d02f0644bd26c333e842d02,
     type: 3}
@@ -172,8 +172,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1926461837
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: 61471488362886149, guid: dfee41b16d02f0644bd26c333e842d02, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -203,8 +203,8 @@ MonoBehaviour:
   - {fileID: 1389745915808232841}
   - {fileID: 6667654562478944110}
   m_Bounds:
-    m_Center: {x: 0.00090406835, y: -0.00068354607, z: 0}
-    m_Extent: {x: 0.20246497, y: 0.5343139, z: 0}
+    m_Center: {x: 0.00090400875, y: -0.00068354607, z: 0}
+    m_Extent: {x: 0.20246491, y: 0.5343139, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1251258770379793037
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 1593401470929046727}
   m_Layer: 0
   m_Name: Freddy Rigging
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -514,7 +514,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766865240188440576}
-  m_LocalRotation: {x: 0, y: 0, z: -0.99789405, w: 0.064866}
+  m_LocalRotation: {x: 0, y: 0, z: -0.99789405, w: 0.06486603}
   m_LocalPosition: {x: 0.35692117, y: -0.21913867, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -545,7 +545,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3137888209590531906}
-  m_LocalRotation: {x: -0, y: -0, z: 0.073207274, w: 0.9973167}
+  m_LocalRotation: {x: -0, y: -0, z: 0.07320733, w: 0.9973167}
   m_LocalPosition: {x: 0.573, y: 0.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -774,8 +774,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1926461837
+  m_SortingLayer: 1
   m_SortingOrder: 6
   m_Sprite: {fileID: 679970515474708303, guid: fe3897e527a74eb4197e998d1f37f4b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -924,7 +924,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3137888210653630499}
-  m_LocalRotation: {x: -0.10265548, y: 0.03094604, z: 0.05837682, w: 0.9925202}
+  m_LocalRotation: {x: -0.10265548, y: 0.030946035, z: 0.05837685, w: 0.99252015}
   m_LocalPosition: {x: 0.538, y: -0.004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1223,8 +1223,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1926461837
+  m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: -9198139051833931898, guid: dfee41b16d02f0644bd26c333e842d02,
     type: 3}
@@ -1453,8 +1453,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1926461837
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -3646281629110114886, guid: dfee41b16d02f0644bd26c333e842d02,
     type: 3}
@@ -1486,8 +1486,8 @@ MonoBehaviour:
   - {fileID: 6477434298052395115}
   - {fileID: 3605790930897535166}
   m_Bounds:
-    m_Center: {x: -0.08314279, y: 0.04149747, z: 0}
-    m_Extent: {x: 0.27141184, y: 0.67047715, z: 0}
+    m_Center: {x: -0.083143085, y: 0.04149753, z: 0}
+    m_Extent: {x: 0.27141196, y: 0.67047703, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5085741169047584998
@@ -1513,7 +1513,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5085741169047584998}
-  m_LocalRotation: {x: 0, y: 0, z: -0.99996144, w: -0.0087915035}
+  m_LocalRotation: {x: 0, y: 0, z: -0.99996144, w: -0.00879156}
   m_LocalPosition: {x: 0.26834267, y: 0.17210522, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1608,7 +1608,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6625070918781132194}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0037175207, w: 0.9999931}
+  m_LocalRotation: {x: 0, y: 0, z: 0.0037174688, w: 0.9999931}
   m_LocalPosition: {x: 0.51496327, y: -0.00000013271617, z: 0}
   m_LocalScale: {x: 0.99999976, y: 0.99999976, z: 1}
   m_Children:
@@ -1716,8 +1716,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1926461837
+  m_SortingLayer: 1
   m_SortingOrder: 6
   m_Sprite: {fileID: 7825545567172838135, guid: dfee41b16d02f0644bd26c333e842d02,
     type: 3}
@@ -1748,8 +1748,8 @@ MonoBehaviour:
   - {fileID: 1780165071711638835}
   - {fileID: 1944769838493985424}
   m_Bounds:
-    m_Center: {x: -0.012106121, y: -0.0039590597, z: 0}
-    m_Extent: {x: 0.19272421, y: 0.5503342, z: 0}
+    m_Center: {x: -0.012105957, y: -0.0039590597, z: 0}
+    m_Extent: {x: 0.19272417, y: 0.5503342, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &7214931983852187259
@@ -1883,8 +1883,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1926461837
+  m_SortingLayer: 1
   m_SortingOrder: 2
   m_Sprite: {fileID: 8557584119402045685, guid: dfee41b16d02f0644bd26c333e842d02,
     type: 3}
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   - {fileID: 7332672599137556052}
   - {fileID: 5777696137755779043}
   m_Bounds:
-    m_Center: {x: -0.00020208955, y: -0.00086301565, z: 0}
-    m_Extent: {x: 0.22400388, y: 0.69040704, z: 0}
+    m_Center: {x: -0.00020205975, y: -0.00086307526, z: 0}
+    m_Extent: {x: 0.22400391, y: 0.69040704, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

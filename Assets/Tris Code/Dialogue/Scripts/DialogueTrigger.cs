@@ -25,4 +25,9 @@ public class DialogueTrigger : MonoBehaviour
         DM.StartCoroutine("StartDialogue", dialogue);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        StartDialogue();
+        Destroy(this, 0);
+    }
 }

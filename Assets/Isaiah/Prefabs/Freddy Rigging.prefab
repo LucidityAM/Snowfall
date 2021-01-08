@@ -575,13 +575,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3137888209636182904}
-  m_LocalRotation: {x: -0.10718282, y: 0.0027661747, z: 0.0057635354, w: 0.9942188}
+  m_LocalRotation: {x: -0.10718277, y: 0.0027682967, z: 0.0057438463, w: 0.9942189}
   m_LocalPosition: {x: 0.571, y: -0.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8277188837088254287}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -12.308001, y: 0.25, z: 0.637}
+  m_LocalEulerAnglesHint: {x: -12.307, y: 0.25100002, z: 0.63500005}
 --- !u!1 &3137888209738985162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1257,7 @@ MonoBehaviour:
   - {fileID: 6135346026960358030}
   m_Bounds:
     m_Center: {x: 0, y: -0.0021501184, z: 0}
-    m_Extent: {x: 0.35, y: 0.60774994, z: 0}
+    m_Extent: {x: 0.35, y: 0.60775, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &4379234373394925117
@@ -1748,7 +1748,7 @@ MonoBehaviour:
   - {fileID: 1780165071711638835}
   - {fileID: 1944769838493985424}
   m_Bounds:
-    m_Center: {x: -0.012105957, y: -0.0039590597, z: 0}
+    m_Center: {x: -0.012105957, y: -0.003959, z: 0}
     m_Extent: {x: 0.19272417, y: 0.5503342, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1775,7 +1775,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7214931983852187259}
-  m_LocalRotation: {x: 0, y: 0, z: -0.998931, w: -0.04622761}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9989319, w: -0.04620783}
   m_LocalPosition: {x: -0.44311258, y: -0.14607786, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   - {fileID: 7332672599137556052}
   - {fileID: 5777696137755779043}
   m_Bounds:
-    m_Center: {x: -0.00020205975, y: -0.00086307526, z: 0}
-    m_Extent: {x: 0.22400391, y: 0.69040704, z: 0}
+    m_Center: {x: -0.00016257167, y: -0.00086688995, z: 0}
+    m_Extent: {x: 0.22399497, y: 0.6904139, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

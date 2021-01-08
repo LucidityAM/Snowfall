@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class PhysDialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
     public DialogueManager DM;
 
-    private bool isActive;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +16,15 @@ public class DialogueTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isActive = DM.isActive;
+        
     }
 
-    public void StartDialogue()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        DM.StartCoroutine("StartDialogue", dialogue);
+        if (collision.gameObject.tag == "Player")
+        {
+            DM.StartCoroutine("StartDialogue", dialogue);
+            Destroy(gameObject, 0);
+        }
     }
-
 }

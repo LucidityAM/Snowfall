@@ -11,5 +11,9 @@ public class SceneMenuManager : MonoBehaviour
         sceneTransition.SetTrigger("isOpen");
         SceneManager.LoadScene(name);
     }
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
 
 }

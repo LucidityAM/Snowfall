@@ -7756,6 +7756,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.2255859
       objectReference: {fileID: 0}
+    - target: {fileID: 5774049672750370167, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CloseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774049672750370167, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5875898091813048234, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: m_LocalPosition.x

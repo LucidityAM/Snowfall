@@ -20,7 +20,6 @@ public class NPC : MonoBehaviour
     public float zoomedSize;
 
     public float duration;
-    private float elapsed = 0.0f;
     private bool resetCam;
     #endregion
 

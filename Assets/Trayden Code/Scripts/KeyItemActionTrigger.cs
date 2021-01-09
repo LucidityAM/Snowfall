@@ -7,7 +7,6 @@ public class KeyItemActionTrigger : MonoBehaviour
     public string gameobjectName;
     public GameObject ActionController;
     public GameObject keyItem;
-    private float speed = 1.5f;
     private Vector2 velocity = Vector2.zero;
     void Start()
     {

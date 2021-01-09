@@ -28,12 +28,15 @@ public class DialogueManager : MonoBehaviour
     public GameObject pause;
 
     private Animator playerAnim;
+
+    private SceneMenuManager SM;
     #endregion
 
     #region Condition Variables
     public bool isActive;
     public bool endText;
     private bool startText;
+    private bool sceneTransition;
     int count;
     #endregion
     
@@ -45,6 +48,8 @@ public class DialogueManager : MonoBehaviour
         spriteAnim = sprite.GetComponent<Animator>();
         spriteImage = sprite.GetComponent<Image>();
         playerAnim = player.GetComponent<Animator>();
+
+        SM = FindObjectOfType<SceneMenuManager>();
         #endregion
 
         #region Turning Off All Components

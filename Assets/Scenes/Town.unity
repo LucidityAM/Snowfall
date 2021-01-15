@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8215,7 +8215,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479589393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3937e1208f7a0932936568635a81d13, type: 3}
   m_Name: 
@@ -8231,7 +8231,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479589393}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cf7ca1fe149a83fcaded682ce25f505, type: 3}
   m_Name: 
@@ -9796,7 +9796,7 @@ PrefabInstance:
     - target: {fileID: 5016536886849550495, guid: 3c8c880511759eb4f80a5c20e890e74a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -605.5157
+      value: -605.5156
       objectReference: {fileID: 0}
     - target: {fileID: 5016536886849550495, guid: 3c8c880511759eb4f80a5c20e890e74a,
         type: 3}

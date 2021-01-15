@@ -6,11 +6,20 @@ using UnityEngine.SceneManagement;
 public class SceneMenuManager : MonoBehaviour
 {
     public Animator sceneTransition;
-    public void LoadSceneName(string name)
+
+    private string levelToLoad;
+
+    public void FadeToLevel(string levelName)
     {
-        sceneTransition.SetTrigger("isOpen");
-        SceneManager.LoadScene(name);
+        levelToLoad = levelName;
+        sceneTransition.SetTrigger("FadeOut");
     }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(levelToLoad);
+    }
+
     public void CloseGame()
     {
         Application.Quit();
@@ -20,7 +29,7 @@ public class SceneMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            LoadSceneName("Credits");
+            FadeToLevel("Credits");
         }           
     }
 }

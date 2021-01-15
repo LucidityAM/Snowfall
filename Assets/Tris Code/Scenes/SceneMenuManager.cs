@@ -16,4 +16,11 @@ public class SceneMenuManager : MonoBehaviour
         Application.Quit();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            LoadSceneName("Credits");
+        }           
+    }
 }

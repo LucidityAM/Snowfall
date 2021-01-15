@@ -12,6 +12,7 @@ public class PauseScript : MonoBehaviour
 
     #region Things that need to be turned off
     public GameObject player;
+    public GameObject fluffy;
     private PlayerMovement playerMovement;
     private Rigidbody2D playerRB;
     private Animator playerAnim;
@@ -114,6 +115,8 @@ public class PauseScript : MonoBehaviour
     {
         playerMovement.enabled = !playerMovement.isActiveAndEnabled;
         playerAnim.enabled = !playerAnim.enabled;
+        fluffy.GetComponent<Animator>().enabled = !fluffy.GetComponent<Animator>().enabled;
+        fluffy.GetComponent<FluffyMovement>().enabled = !fluffy.GetComponent<FluffyMovement>().enabled;
         if (paused == true)
         {
             playerRB.velocity = new Vector3(0, 0, 0);

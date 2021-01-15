@@ -169,14 +169,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: StartEnumerator
+        m_MethodName: FadeToLevel
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: FakeCloseMenu
+          m_StringArgument: TitleScreen
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &4189519634405668388
@@ -248,7 +248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.24900001, y: 1}
-  m_AnchoredPosition: {x: 0.29882812, y: 0}
+  m_AnchoredPosition: {x: -0.2890625, y: 0}
   m_SizeDelta: {x: 0.4206543, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3799509618397360333
@@ -341,7 +341,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.6899414, y: 0}
+  m_AnchoredPosition: {x: 4.300293, y: 0}
   m_SizeDelta: {x: 459.1112, y: 90.00001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8092744462781238680
@@ -455,7 +455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.6511298}
   m_AnchorMax: {x: 0.92046845, y: 0.97}
-  m_AnchoredPosition: {x: -0.383667, y: 5}
+  m_AnchoredPosition: {x: 0.3347168, y: -1.2250977}
   m_SizeDelta: {x: -0.6693115, y: 2.4503784}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8329641507678051933
@@ -508,6 +508,7 @@ GameObject:
   - component: {fileID: 4868907514879307634}
   - component: {fileID: 5862212145436968184}
   - component: {fileID: 5794578161837249751}
+  - component: {fileID: 1911185972}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -654,6 +655,34 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &1911185972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5619233754039048333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1534182185631313184}
+          m_MethodName: Button2Open
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &5990361373811490534
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +720,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.048468284, y: 0.53300005}
   m_AnchorMax: {x: 0.8306644, y: 0.602463}
-  m_AnchoredPosition: {x: 0.30029297, y: 0.22473145}
+  m_AnchoredPosition: {x: 0, y: 0.22460938}
   m_SizeDelta: {x: -599.2523, y: -120.197914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7892744364103634463
@@ -847,7 +876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.39990234, y: 0}
   m_SizeDelta: {x: 439.8922, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &176638995826564996
@@ -1006,7 +1035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38461113}
   m_AnchorMax: {x: 0.9906013, y: 0.6142223}
-  m_AnchoredPosition: {x: -907, y: 140}
+  m_AnchoredPosition: {x: -62.799805, y: 150}
   m_SizeDelta: {x: -120.37622, y: -312.26367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4347600858547732043
@@ -1058,8 +1087,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e52854c67df97104c9fb59a4985f9696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTimeY: 1
-  smoothTimeX: 1
+  smoothTimeY: 0
+  smoothTimeX: 0
   button1: {fileID: 5990361373811490534}
   button2: {fileID: 5619233754039048333}
   button3: {fileID: 781323534268835687}

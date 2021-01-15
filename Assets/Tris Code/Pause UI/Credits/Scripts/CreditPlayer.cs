@@ -22,7 +22,7 @@ public class CreditPlayer : MonoBehaviour
 
     public void NextCredits()
     {
-        if(currentPage < creditSprites.Length)
+        if(currentPage < creditSprites.Length - 1)
         {
             currentPage++;
         }

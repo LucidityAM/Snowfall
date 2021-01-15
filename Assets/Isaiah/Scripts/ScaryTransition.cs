@@ -18,6 +18,8 @@ public class ScaryTransition : MonoBehaviour
 
     bool isDissolving;
 
+    public PlayerMovement playerMovement;
+
     void Start()
     {
         fade = 1f;
@@ -65,6 +67,8 @@ public class ScaryTransition : MonoBehaviour
                 fade = 0f;
                 isDissolving = false;
                 DissolveGO.SetActive(false);
+
+                playerMovement.enabled = true;
             }
 
             dissolveMat.SetFloat("_Fade", fade); 

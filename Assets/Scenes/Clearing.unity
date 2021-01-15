@@ -484,6 +484,12 @@ Rigidbody2D:
     type: 3}
   m_PrefabInstance: {fileID: 127010987}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &379005689 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1593401470929046730, guid: de6bfc717c175104589e96024ec27002,
+    type: 3}
+  m_PrefabInstance: {fileID: 127010987}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456800893
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +805,7 @@ MonoBehaviour:
   transition: {fileID: 231442723}
   playerMovement: {fileID: 379005685}
   Player: {fileID: 379005687}
-  anim: {fileID: 0}
+  anim: {fileID: 379005689}
 --- !u!61 &2041999158
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -813,7 +819,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.35399628}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -824,7 +830,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.9929023}
   m_EdgeRadius: 0
 --- !u!212 &2041999159
 SpriteRenderer:
@@ -888,6 +894,21 @@ PrefabInstance:
       propertyPath: playerMovement
       value: 
       objectReference: {fileID: 379005685}
+    - target: {fileID: 527198167292559605, guid: 489424aaefd1ac34c96c8e76f449fae2,
+        type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 379005687}
+    - target: {fileID: 527198167292559605, guid: 489424aaefd1ac34c96c8e76f449fae2,
+        type: 3}
+      propertyPath: transitionBar
+      value: 
+      objectReference: {fileID: 2041999155}
+    - target: {fileID: 527198167292559605, guid: 489424aaefd1ac34c96c8e76f449fae2,
+        type: 3}
+      propertyPath: playerAnim
+      value: 
+      objectReference: {fileID: 379005689}
     - target: {fileID: 527198167562520026, guid: 489424aaefd1ac34c96c8e76f449fae2,
         type: 3}
       propertyPath: m_LocalRotation.x

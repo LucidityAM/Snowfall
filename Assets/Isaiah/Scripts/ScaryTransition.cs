@@ -19,6 +19,9 @@ public class ScaryTransition : MonoBehaviour
     bool isDissolving;
 
     public PlayerMovement playerMovement;
+    public Rigidbody2D Player;
+    public Animator playerAnim;
+    public GameObject transitionBar;
 
     void Start()
     {
@@ -64,11 +67,15 @@ public class ScaryTransition : MonoBehaviour
 
             if (fade <= 0f)
             {
+                transitionBar.SetActive(false);
+
+                playerAnim.enabled = true;
+                Player.bodyType = RigidbodyType2D.Dynamic;
+                playerMovement.enabled = true;
+
                 fade = 0f;
                 isDissolving = false;
                 DissolveGO.SetActive(false);
-
-                playerMovement.enabled = true;
             }
 
             dissolveMat.SetFloat("_Fade", fade); 

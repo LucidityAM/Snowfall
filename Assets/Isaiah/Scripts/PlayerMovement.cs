@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public float rememberGroundedFor;
     float lastTimeGrounded;
 
+    public string currentScene;
+
     //Components
     Rigidbody2D rb;
     Animator anim;
@@ -30,13 +33,22 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audioSrc = GetComponent<AudioSource>();
+
+        currentScene = SceneManager.GetActiveScene().ToString();
     }
 
     void Update()
     {
+        
+
         Move();
-        Jump();
-        BetterJump();
+
+        if(currentScene == "chase")
+        {
+            Jump();
+            BetterJump();
+        }
+        
         CheckIfGrounded();
 
         anim.SetFloat("walkSpeed", Mathf.Abs(rb.velocity.x));
@@ -51,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
             float moveBy = x * speed;
             rb.velocity = new Vector2(moveBy, rb.velocity.y);
 
-            if (rb.velocity.x >= 0)
+            if (rb.velocity.x > 0)
             {
                 this.gameObject.transform.rotation = Quaternion.Euler(0,180,0);
             }
@@ -59,10 +71,10 @@ public class PlayerMovement : MonoBehaviour
             {
                 this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            else if (rb.velocity.x == 0)
-            {
-                this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
+            //else if (rb.velocity.x == 0)
+            //{
+            //    this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            //}
 
             if (Mathf.Abs(rb.velocity.x) != 0 && isGrounded)
             {

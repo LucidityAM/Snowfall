@@ -20,6 +20,24 @@ TextureImporter:
   - first:
       213: -6916914879547883506
     second: fluffy idle (2)_5
+  - first:
+      213: -5114887124300639053
+    second: fluffy idle (2)_0
+  - first:
+      213: -6474961750710936424
+    second: fluffy idle (2)_1
+  - first:
+      213: 8245588206343028239
+    second: fluffy idle (2)_2
+  - first:
+      213: -4615331728023467219
+    second: fluffy idle (2)_3
+  - first:
+      213: -5101908196877203582
+    second: fluffy idle (2)_4
+  - first:
+      213: 1108677912819529988
+    second: fluffy idle (2)_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,10 +138,10 @@ TextureImporter:
       name: fluffy idle (2)_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 7
-        width: 251
-        height: 206
+        x: 0
+        y: 0
+        width: 300
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,8 +149,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05c1f5d930b417410800000000000000
-      internalID: 1473041032024104016
+      spriteID: 3b457d1a2454409b0800000000000000
+      internalID: -5114887124300639053
       vertices: []
       indices: 
       edges: []
@@ -141,10 +159,10 @@ TextureImporter:
       name: fluffy idle (2)_1
       rect:
         serializedVersion: 2
-        x: 315
-        y: 7
-        width: 251
-        height: 208
+        x: 300
+        y: 0
+        width: 300
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,8 +170,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa8e8e8c66a7fdfe0800000000000000
-      internalID: -1162075596962338646
+      spriteID: 89c12a2f7905426a0800000000000000
+      internalID: -6474961750710936424
       vertices: []
       indices: 
       edges: []
@@ -162,10 +180,10 @@ TextureImporter:
       name: fluffy idle (2)_2
       rect:
         serializedVersion: 2
-        x: 615
-        y: 7
-        width: 273
-        height: 208
+        x: 600
+        y: 0
+        width: 300
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +191,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c6d301b620802160800000000000000
-      internalID: 6998734724600682181
+      spriteID: f0ef93369c63e6270800000000000000
+      internalID: 8245588206343028239
       vertices: []
       indices: 
       edges: []
@@ -183,10 +201,10 @@ TextureImporter:
       name: fluffy idle (2)_3
       rect:
         serializedVersion: 2
-        x: 915
-        y: 7
-        width: 259
-        height: 205
+        x: 900
+        y: 0
+        width: 300
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,8 +212,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4c424bbae290b69c0800000000000000
-      internalID: -3933039753524140860
+      spriteID: d2b42961f3c03ffb0800000000000000
+      internalID: -4615331728023467219
       vertices: []
       indices: 
       edges: []
@@ -204,10 +222,10 @@ TextureImporter:
       name: fluffy idle (2)_4
       rect:
         serializedVersion: 2
-        x: 1215
-        y: 7
-        width: 251
-        height: 208
+        x: 1200
+        y: 0
+        width: 300
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +233,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb78bd212afb3f5a0800000000000000
-      internalID: -6488631935288768577
+      spriteID: 2870b78a6816239b0800000000000000
+      internalID: -5101908196877203582
       vertices: []
       indices: 
       edges: []
@@ -225,10 +243,10 @@ TextureImporter:
       name: fluffy idle (2)_5
       rect:
         serializedVersion: 2
-        x: 1515
-        y: 7
-        width: 259
-        height: 206
+        x: 1500
+        y: 0
+        width: 300
+        height: 280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,8 +254,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e004fee709e2200a0800000000000000
-      internalID: -6916914879547883506
+      spriteID: 409fdeb00b0d26f00800000000000000
+      internalID: 1108677912819529988
       vertices: []
       indices: 
       edges: []

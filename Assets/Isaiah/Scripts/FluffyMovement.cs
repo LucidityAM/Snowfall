@@ -1,54 +1,43 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class FluffyMovement : MonoBehaviour
 {
-    public GameObject player;
-    private Vector2 velocity = Vector2.zero;
+    public GameObject Character; // Target Object to follow
+    Animator anim;
 
-    bool isFlipped;
+    public float speed = 0.1F; // Speed
+    public float followDistance; //Distance to follow
+
+    private Vector2 directionOfCharacter;
+
+    void Awake()
+    {
+        anim = gameObject.GetComponent<Animator>();
+    }
 
     void Update()
     {
-        if (gameObject.transform.position.x - player.transform.position.x < -2.3f && isFlipped == false)
+
+        if (Vector2.Distance(Character.transform.position, gameObject.transform.position) >= followDistance)
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            if (Vector2.Distance(Character.transform.position, gameObject.transform.position) >= (followDistance + .1f))
+            {
+                anim.SetBool("isMoving", true);
+            }
 
-            Vector2 playerPosAdj = new Vector2(player.transform.position.x - 2.5f, player.transform.position.y + 1.3f);
-
-            gameObject.transform.position = Vector2.SmoothDamp(gameObject.transform.position, playerPosAdj, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);    
+            directionOfCharacter.x = Character.transform.position.x - transform.position.x;
+            directionOfCharacter.y = (Character.transform.position.y + 1.5f) - transform.position.y;
+            directionOfCharacter = directionOfCharacter.normalized;    // Get Direction to Move Towards
+            transform.Translate(directionOfCharacter * speed, Space.World);
+            transform.rotation = Character.transform.rotation;
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().flipX = false;
-
-            Vector2 playerPosAdj = new Vector2(player.transform.position.x + 2.5f, player.transform.position.y + 1.3f);
-
-            gameObject.transform.position = Vector2.SmoothDamp(gameObject.transform.position, playerPosAdj, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
-
-            StartCoroutine(Wait());
+            anim.SetBool("isMoving", false);
         }
-
-
-        if(gameObject.transform.position.x - player.transform.position.x < 2.45f && isFlipped)
-        {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
-
-            Vector2 playerPosAdj = new Vector2(player.transform.position.x + 2.5f, player.transform.position.y + 1.3f);
-
-            gameObject.transform.position = Vector2.SmoothDamp(gameObject.transform.position, playerPosAdj, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
-        }
-
-        Debug.Log(gameObject.transform.position.x - player.transform.position.x);
-
-    }
-
-
-    public IEnumerator Wait()
-    {
-        yield return new WaitForSeconds(.5f);
-
-        isFlipped = true;
+        
     }
 }
+

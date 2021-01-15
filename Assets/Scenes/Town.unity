@@ -8071,6 +8071,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.2255859
       objectReference: {fileID: 0}
+    - target: {fileID: 5303490945608491035, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.39990234
+      objectReference: {fileID: 0}
     - target: {fileID: 5774049672750370167, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -8191,6 +8196,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 607476068}
+    - target: {fileID: 7745692530656737495, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: fluffy
+      value: 
+      objectReference: {fileID: 681673932}
     - target: {fileID: 8954861681372400316, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8829,7 +8839,7 @@ PrefabInstance:
     - target: {fileID: 322375730693206836, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -605.51575
+      value: -605.5157
       objectReference: {fileID: 0}
     - target: {fileID: 3586810541955829864, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda,
         type: 3}

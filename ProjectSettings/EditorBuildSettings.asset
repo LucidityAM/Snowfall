@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TitleScreen.unity
     guid: 06df1dba2ed013f46afa4dd43dd62aae
+  - enabled: 1
+    path: Assets/Scenes/Clearing.unity
+    guid: c81dda44d614d194a8346c4fcdc56bd4
   m_configObjects: {}

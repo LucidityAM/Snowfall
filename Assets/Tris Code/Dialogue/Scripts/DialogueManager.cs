@@ -35,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     #region Condition Variables
     public bool isActive;
     public bool endText;
+    public bool dogTrigger;
     private bool startText;
     private bool sceneTransition;
     int count;
@@ -66,6 +67,7 @@ public class DialogueManager : MonoBehaviour
         isActive = false;
         endText = true;
         startText = false;
+        DialogueConditions.dogTrigger = true;
         count = 0;
         #endregion
 
@@ -96,6 +98,11 @@ public class DialogueManager : MonoBehaviour
         isActive = true;
         startText = true;
         count = 0;
+        #endregion
+
+        #region triggers for outside things to happen
+        if(dogTrigger == true) { DialogueConditions.dogTrigger = true; }
+
         #endregion
 
         #region Setting Up Queues. Turning Arrays > Queues
@@ -178,6 +185,7 @@ public class DialogueManager : MonoBehaviour
         //Bool on so if anywhere else is still active, it will stop and go to endText
         endText = true;
         isActive = false;
+        DialogueConditions.dogTrigger = true;
 
         //Enable player controls
 

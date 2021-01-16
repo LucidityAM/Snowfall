@@ -20,24 +20,31 @@ public class FluffyMovement : MonoBehaviour
     void Update()
     {
 
-        if (Vector2.Distance(Character.transform.position, gameObject.transform.position) >= followDistance)
+        if(DialogueConditions.dogTrigger == false)
         {
-            if (Vector2.Distance(Character.transform.position, gameObject.transform.position) >= (followDistance + .1f))
+            if (Vector2.Distance(Character.transform.position, gameObject.transform.position) >= followDistance)
             {
-                anim.SetBool("isMoving", true);
-            }
+                if (Vector2.Distance(Character.transform.position, gameObject.transform.position) >= (followDistance + .1f))
+                {
+                    anim.SetBool("isMoving", true);
+                }
 
-            directionOfCharacter.x = Character.transform.position.x - transform.position.x;
-            directionOfCharacter.y = (Character.transform.position.y + 1.5f) - transform.position.y;
-            directionOfCharacter = directionOfCharacter.normalized;    // Get Direction to Move Towards
-            transform.Translate(directionOfCharacter * speed, Space.World);
-            transform.rotation = Character.transform.rotation;
+                directionOfCharacter.x = Character.transform.position.x - transform.position.x;
+                directionOfCharacter.y = (Character.transform.position.y + 1.5f) - transform.position.y;
+                directionOfCharacter = directionOfCharacter.normalized;    // Get Direction to Move Towards
+                transform.Translate(directionOfCharacter * speed, Space.World);
+                transform.rotation = Character.transform.rotation;
+            }
+            else
+            {
+                anim.SetBool("isMoving", false);
+            }
         }
         else
         {
-            anim.SetBool("isMoving", false);
+            anim.SetBool("isMoving", true);
+            transform.Translate((directionOfCharacter * speed * 100f), Space.World);
         }
-        
     }
 }
 

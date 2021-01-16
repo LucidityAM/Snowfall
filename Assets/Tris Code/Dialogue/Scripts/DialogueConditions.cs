@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class DialogueConditions
 {
-    public static bool dogTrigger;
+    public static bool dogTrigger = false;
 }

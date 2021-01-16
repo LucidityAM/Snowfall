@@ -203,8 +203,8 @@ MonoBehaviour:
   - {fileID: 1389745915808232841}
   - {fileID: 6667654562478944110}
   m_Bounds:
-    m_Center: {x: 0.00090400875, y: -0.00068354607, z: 0}
-    m_Extent: {x: 0.20246491, y: 0.5343139, z: 0}
+    m_Center: {x: 0.00090409815, y: -0.00068354607, z: 0}
+    m_Extent: {x: 0.20246494, y: 0.5343139, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1251258770379793037
@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 1593401470929046725}
   - component: {fileID: 1593401470929046724}
   - component: {fileID: 1593401470929046727}
+  - component: {fileID: 607476076}
   m_Layer: 0
   m_Name: Freddy Rigging
   m_TagString: Player
@@ -382,11 +383,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f6cd9de0ba1a60d4cad98e3461f1ff47, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.56
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -491,6 +492,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   rememberGroundedFor: 0.05
+  currentScene: 
+--- !u!114 &607476076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593401470929046729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d34c62336dfad4c478c51ac4b42b793a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1766865240188440576
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +559,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3137888209590531906}
-  m_LocalRotation: {x: -0, y: -0, z: 0.07320733, w: 0.9973167}
+  m_LocalRotation: {x: -0, y: -0, z: 0.073207274, w: 0.9973167}
   m_LocalPosition: {x: 0.573, y: 0.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1486,8 +1500,8 @@ MonoBehaviour:
   - {fileID: 6477434298052395115}
   - {fileID: 3605790930897535166}
   m_Bounds:
-    m_Center: {x: -0.083143085, y: 0.04149753, z: 0}
-    m_Extent: {x: 0.27141196, y: 0.67047703, z: 0}
+    m_Center: {x: -0.08314279, y: 0.04149747, z: 0}
+    m_Extent: {x: 0.27141184, y: 0.67047703, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5085741169047584998
@@ -1513,7 +1527,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5085741169047584998}
-  m_LocalRotation: {x: 0, y: 0, z: -0.99996144, w: -0.00879156}
+  m_LocalRotation: {x: 0, y: 0, z: -0.99996144, w: -0.0087915035}
   m_LocalPosition: {x: 0.26834267, y: 0.17210522, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1748,8 +1762,8 @@ MonoBehaviour:
   - {fileID: 1780165071711638835}
   - {fileID: 1944769838493985424}
   m_Bounds:
-    m_Center: {x: -0.012105957, y: -0.003959, z: 0}
-    m_Extent: {x: 0.19272417, y: 0.5503342, z: 0}
+    m_Center: {x: -0.012106016, y: -0.003959, z: 0}
+    m_Extent: {x: 0.19272423, y: 0.5503342, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &7214931983852187259
@@ -1916,7 +1930,7 @@ MonoBehaviour:
   - {fileID: 7332672599137556052}
   - {fileID: 5777696137755779043}
   m_Bounds:
-    m_Center: {x: -0.00016257167, y: -0.00086688995, z: 0}
-    m_Extent: {x: 0.22399497, y: 0.6904139, z: 0}
+    m_Center: {x: -0.00016269088, y: -0.00086688995, z: 0}
+    m_Extent: {x: 0.22399509, y: 0.6904139, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

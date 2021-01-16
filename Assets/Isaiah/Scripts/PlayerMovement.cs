@@ -26,13 +26,11 @@ public class PlayerMovement : MonoBehaviour
     //Components
     Rigidbody2D rb;
     Animator anim;
-    AudioSource audioSrc;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        audioSrc = GetComponent<AudioSource>();
 
         currentScene = SceneManager.GetActiveScene().ToString();
     }
@@ -84,16 +82,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 anim.speed = 0.6f;
             }//Scales animation speed with the walk speed;
-
-            if (rb.velocity.x != 0)
-            {
-                if (!audioSrc.isPlaying)
-                    audioSrc.Play();
-            }
-            else
-            {
-                audioSrc.Stop();
-            }//Plays the sound of walking if the player is walking
 
         }
     }

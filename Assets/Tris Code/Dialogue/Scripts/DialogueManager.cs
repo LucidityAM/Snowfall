@@ -67,6 +67,7 @@ public class DialogueManager : MonoBehaviour
         isActive = false;
         endText = true;
         startText = false;
+        dogTrigger = false;
         DialogueConditions.dogTrigger = true;
         count = 0;
         #endregion
@@ -100,9 +101,8 @@ public class DialogueManager : MonoBehaviour
         count = 0;
         #endregion
 
-        #region triggers for outside things to happen
-        if(dogTrigger == true) { DialogueConditions.dogTrigger = true; }
-
+        #region Settings Bools to dialogue value
+        dogTrigger = dialogue.dogTrigger;
         #endregion
 
         #region Setting Up Queues. Turning Arrays > Queues
@@ -138,6 +138,10 @@ public class DialogueManager : MonoBehaviour
         dialogueText.gameObject.SetActive(true);
         DisplayNextSentence();
         startText = false;
+        #region triggers for outside things to happen
+        if (dogTrigger == true) { DialogueConditions.dogTrigger = true; }
+
+        #endregion
         #endregion
 
     }

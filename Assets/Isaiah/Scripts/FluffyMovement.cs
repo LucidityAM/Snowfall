@@ -11,6 +11,9 @@ public class FluffyMovement : MonoBehaviour
     public float followDistance; //Distance to follow
 
     private Vector2 directionOfCharacter;
+    private Vector2 run;
+
+    public Transform runAway;
 
     void Awake()
     {
@@ -19,6 +22,8 @@ public class FluffyMovement : MonoBehaviour
 
     void Update()
     {
+
+        Debug.Log(DialogueConditions.dogTrigger);
 
         if(DialogueConditions.dogTrigger == false)
         {
@@ -40,10 +45,14 @@ public class FluffyMovement : MonoBehaviour
                 anim.SetBool("isMoving", false);
             }
         }
-        else
+        else if(DialogueConditions.dogTrigger == true)
         {
             anim.SetBool("isMoving", true);
-            transform.Translate((directionOfCharacter * speed * 100f), Space.World);
+
+            run = runAway.position - gameObject.transform.position;
+            run = run.normalized;    // Get Direction to Move Towards
+
+            transform.Translate(run * speed, Space.World);
         }
     }
 }

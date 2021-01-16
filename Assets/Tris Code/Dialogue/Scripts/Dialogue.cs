@@ -6,7 +6,7 @@ using UnityEngine;
 public class Dialogue 
 {
     //bool for dog
-    public bool dogTrigger;
+    public bool dogTrigger = false;
 
     [TextArea(3, 10)]
     //string for sentences

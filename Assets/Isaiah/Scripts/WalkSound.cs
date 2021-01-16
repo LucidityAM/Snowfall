@@ -17,7 +17,7 @@ public class WalkSound : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x != 0)
+        if (rb.velocity.x != 0 && Input.GetAxisRaw("Horizontal") != 0)
         {
             if (!audioSrc.isPlaying)
                 audioSrc.Play();

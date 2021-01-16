@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
         endText = true;
         startText = false;
         dogTrigger = false;
-        DialogueConditions.dogTrigger = true;
+        DialogueConditions.dogTrigger = false;
         count = 0;
         #endregion
 
@@ -189,7 +189,6 @@ public class DialogueManager : MonoBehaviour
         //Bool on so if anywhere else is still active, it will stop and go to endText
         endText = true;
         isActive = false;
-        DialogueConditions.dogTrigger = true;
 
         //Enable player controls
 

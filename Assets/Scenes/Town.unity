@@ -467,6 +467,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31830ea1cfb42384eaa1fe1b584faf86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &153229268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 153229269}
+  m_Layer: 0
+  m_Name: Fluffy Run Away
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &153229269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153229268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.85, y: -2.2, z: -1.4179688}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &161710219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,7 +1976,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Character: {fileID: 607476068}
   speed: 0.14
-  followDistance: 2.66
+  followDistance: 3.18
+  runAway: {fileID: 153229269}
 --- !u!95 &681673935
 Animator:
   serializedVersion: 3
@@ -2077,6 +2108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
+    dogTrigger: 1
     sentences:
     - "\"Wuh--Fluffy! What's the matter, girl? Did you find a great spot?\"\r"
     - "\"...Fluffy?...Did you\u2026?\""
@@ -2817,6 +2849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
+    dogTrigger: 0
     sentences:
     - "\"Come on, girl, we've gotta find the best hiding spot for the snowball fight!\"
       \r"
@@ -5128,7 +5161,7 @@ PrefabInstance:
     - target: {fileID: 5016536886849550495, guid: 3c8c880511759eb4f80a5c20e890e74a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -605.5156
+      value: -605.51575
       objectReference: {fileID: 0}
     - target: {fileID: 5016536886849550495, guid: 3c8c880511759eb4f80a5c20e890e74a,
         type: 3}

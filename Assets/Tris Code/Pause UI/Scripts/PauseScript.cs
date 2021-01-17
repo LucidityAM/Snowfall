@@ -13,9 +13,13 @@ public class PauseScript : MonoBehaviour
     #region Things that need to be turned off
     public GameObject player;
     public GameObject fluffy;
+    public AudioSource audio;
     private PlayerMovement playerMovement;
     private Rigidbody2D playerRB;
     private Animator playerAnim;
+
+    public AudioClip openSound;
+    public AudioClip closeSound;
     #endregion
 
     private bool paused;
@@ -52,7 +56,6 @@ public class PauseScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("yuh");
                 StartCoroutine("RealOpenMenu");
             }
         }
@@ -79,6 +82,8 @@ public class PauseScript : MonoBehaviour
     //So I will now use 2 sets of 2 methods to do the exact same thing!
     public IEnumerator FakeOpenMenu()
     {
+        audio.clip = openSound;
+        audio.Play();
         paused = true;
         ToggleScripts();
         yield return new WaitForSeconds(0.1f);
@@ -88,6 +93,8 @@ public class PauseScript : MonoBehaviour
 
     public IEnumerator FakeCloseMenu()
     {
+        audio.clip = closeSound;
+        audio.Play();
         paused = false;
         ToggleScripts();
         fakepauseBGAnim.SetBool("IsOpen", false);

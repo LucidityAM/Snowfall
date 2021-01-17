@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     //Visual Stuff
     public GameObject textBox;
     public GameObject sprite;
+    public AudioSource audio;
 
     // Animator Variables
     private Animator textBoxAnim;
@@ -23,6 +24,9 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private Queue<Sprite> sprites;
     private Queue<AudioClip> voices;
+
+
+    public AudioClip nextSound;
 
     public GameObject player;
     public GameObject pause;
@@ -148,6 +152,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+
         //Condition checks if sentences are less than 0. If it is, it goes to EndDialogue()
         if (sentences.Count <= 0)
         {
@@ -156,7 +161,9 @@ public class DialogueManager : MonoBehaviour
         }
         if (count > 1)
         {
-            spriteImage.sprite = sprites.Dequeue(); 
+            spriteImage.sprite = sprites.Dequeue();
+            audio.clip = nextSound;
+            audio.Play();
         }
         count++;
         //Making local variables for the current sentence and name
@@ -179,7 +186,7 @@ public class DialogueManager : MonoBehaviour
                 //StartCoroutine("EndDialogue");
             }
             dialogueText.text += letter;
-            yield return new WaitForSeconds(0.005f);
+            yield return new WaitForSeconds(0.001f);
             yield return null;
         }
     }

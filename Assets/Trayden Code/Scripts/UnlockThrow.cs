@@ -6,14 +6,12 @@ public class UnlockThrow : MonoBehaviour
 {
     public GameObject[] keyItems;
     public bool isActive = false;
-
-    public GameObject[] lights = new GameObject[10];
-
+    public GameObject[] lights;
     public GameObject monochrome;
-
     void Start()
     {
         keyItems = GameObject.FindGameObjectsWithTag("Key Item");
+        lights = GameObject.FindGameObjectsWithTag("Key Light");
     }
 
     void Update()
@@ -24,13 +22,9 @@ public class UnlockThrow : MonoBehaviour
             if(isActive)
             {
                 monochrome.SetActive(true);
-
-                foreach(GameObject keyItem in keyItems)
+                foreach(GameObject lights in lights)
                 {
-                    foreach(GameObject lights in lights)
-                    {
-                        lights.SetActive(true);
-                    }
+                    lights.SetActive(true);
                 }
                 gameObject.GetComponent<SnowballThrow>().enabled = true;
             }
@@ -39,15 +33,11 @@ public class UnlockThrow : MonoBehaviour
 
         if(isActive == false)
         {
-            foreach (GameObject keyItem in keyItems)
+            foreach (GameObject lights in lights)
             {
-                foreach (GameObject lights in lights)
-                {
-                    lights.SetActive(false);
-                }
+                lights.SetActive(false);
             }
             monochrome.SetActive(false);
-
             gameObject.GetComponent<SnowballThrow>().enabled = false;
         }
     }

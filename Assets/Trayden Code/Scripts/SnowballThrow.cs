@@ -10,11 +10,6 @@ public class SnowballThrow : MonoBehaviour
     public GameObject player;
     public GameObject keyItem;
 
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
-
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -26,6 +21,11 @@ public class SnowballThrow : MonoBehaviour
             {
                 keyItem = hit.collider.gameObject;
                 Instantiate(snowballProjectile, new Vector3(player.transform.position.x + .75f, player.transform.position.y + 2f, 0), Quaternion.identity);
+                gameObject.GetComponent<UnlockThrow>().isActive = false;
+                gameObject.GetComponent<SnowballThrow>().enabled = false;
+            }
+            else if(hit.collider.CompareTag(null))
+            {
                 gameObject.GetComponent<UnlockThrow>().isActive = false;
                 gameObject.GetComponent<SnowballThrow>().enabled = false;
             }

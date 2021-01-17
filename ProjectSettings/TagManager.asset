@@ -12,6 +12,7 @@ TagManager:
   - Real
   - NPC
   - NPC Idle
+  - Key Light
   layers:
   - Default
   - TransparentFX

@@ -38,7 +38,7 @@ public class PauseScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -52,6 +52,7 @@ public class PauseScript : MonoBehaviour
             }
             else
             {
+                Debug.Log("yuh");
                 StartCoroutine("RealOpenMenu");
             }
         }
@@ -115,8 +116,11 @@ public class PauseScript : MonoBehaviour
     {
         playerMovement.enabled = !playerMovement.isActiveAndEnabled;
         playerAnim.enabled = !playerAnim.enabled;
-        fluffy.GetComponent<Animator>().enabled = !fluffy.GetComponent<Animator>().enabled;
-        fluffy.GetComponent<FluffyMovement>().enabled = !fluffy.GetComponent<FluffyMovement>().enabled;
+        if (fluffy != null)
+        {
+            fluffy.GetComponent<Animator>().enabled = !fluffy.GetComponent<Animator>().enabled;
+            fluffy.GetComponent<FluffyMovement>().enabled = !fluffy.GetComponent<FluffyMovement>().enabled;
+        }
         if (paused == true)
         {
             playerRB.velocity = new Vector3(0, 0, 0);

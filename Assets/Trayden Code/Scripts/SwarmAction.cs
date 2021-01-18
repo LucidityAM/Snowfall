@@ -43,5 +43,10 @@ public class SwarmAction : MonoBehaviour
         {
             SceneManager.LoadScene("Forest");
         }
+        if(collision.gameObject.name == "Huh")
+        {
+            huh.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 }

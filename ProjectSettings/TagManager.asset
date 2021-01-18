@@ -13,6 +13,7 @@ TagManager:
   - NPC
   - NPC Idle
   - Key Light
+  - Bush
   layers:
   - Default
   - TransparentFX

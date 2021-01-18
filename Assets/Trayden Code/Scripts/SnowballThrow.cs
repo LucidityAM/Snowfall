@@ -7,8 +7,13 @@ public class SnowballThrow : MonoBehaviour
     Vector2 worldPoint;
     RaycastHit2D hit;
     public GameObject snowballProjectile;
-    public GameObject player;
+    private GameObject player;
     public GameObject keyItem;
+
+    void Start() 
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     void Update()
     {

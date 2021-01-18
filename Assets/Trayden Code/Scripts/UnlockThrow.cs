@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class UnlockThrow : MonoBehaviour
 {
-    public GameObject[] keyItems;
+    private GameObject[] keyItems;
     public bool isActive = false;
-    public GameObject[] lights;
+    private GameObject[] lights;
     public GameObject monochrome;
     void Start()
     {

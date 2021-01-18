@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class KeyItemActionTrigger : MonoBehaviour
 {
-    public string gameobjectName;
-    public GameObject ActionController;
+    private string gameobjectName;
+    private GameObject ActionController;
     public GameObject keyItem;
     private Vector2 velocity = Vector2.zero;
+
     void Start()
     {
         ActionController = GameObject.FindGameObjectWithTag("Action Controller");
@@ -18,6 +19,7 @@ public class KeyItemActionTrigger : MonoBehaviour
     {
         gameObject.transform.position = Vector2.SmoothDamp(gameObject.transform.position, keyItem.transform.position, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
     }
+    
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Key Item"))

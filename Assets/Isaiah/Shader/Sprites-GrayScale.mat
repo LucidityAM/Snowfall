@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Sprites-GrayScale
   m_Shader: {fileID: 4800000, guid: b841fd9943d1ad246826ed841bc951db, type: 3}
-  m_ShaderKeywords: PIXELSNAP_ON
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA PIXELSNAP_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

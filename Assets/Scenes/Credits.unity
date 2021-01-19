@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -934,10 +934,10 @@ RectTransform:
   m_Father: {fileID: 1465406828}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.048}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1577, y: 980.63}
-  m_SizeDelta: {x: 702.3889, y: 198.74536}
+  m_AnchorMin: {x: 0, y: 0.90400004}
+  m_AnchorMax: {x: 0.18100001, y: 1}
+  m_AnchoredPosition: {x: -5, y: 4.130005}
+  m_SizeDelta: {x: 6.388916, y: -8.254639}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1718074532
 MonoBehaviour:
@@ -984,7 +984,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1644680891}
         m_MethodName: FadeToLevel
-        m_Mode: 5
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

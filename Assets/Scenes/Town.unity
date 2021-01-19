@@ -2466,7 +2466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d16b79a047e18243b50d9caeac1cc28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Clearing
+  sceneName: 2
   sceneTransition: {fileID: 1754372199}
 --- !u!61 &1033052193
 BoxCollider2D:
@@ -4794,7 +4794,7 @@ PrefabInstance:
     - target: {fileID: 5016536886849550495, guid: 3c8c880511759eb4f80a5c20e890e74a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -605.51575
+      value: -605.5157
       objectReference: {fileID: 0}
     - target: {fileID: 5016536886849550495, guid: 3c8c880511759eb4f80a5c20e890e74a,
         type: 3}

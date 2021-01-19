@@ -427,6 +427,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6762272982518916536, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.057617188
+      objectReference: {fileID: 0}
     - target: {fileID: 7222740687178047017, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: sceneTransition
@@ -462,20 +467,15 @@ PrefabInstance:
       propertyPath: audio
       value: 
       objectReference: {fileID: 5760564320527710718}
-    - target: {fileID: 7745692530656737495, guid: 47691e4e99924ad4b9e9994d990c0874,
-        type: 3}
-      propertyPath: openSound
-      value: 
-      objectReference: {fileID: 8300000, guid: b7b9aa35f066cdb49a0c40fe80bdafad, type: 3}
-    - target: {fileID: 7745692530656737495, guid: 47691e4e99924ad4b9e9994d990c0874,
-        type: 3}
-      propertyPath: closeSound
-      value: 
-      objectReference: {fileID: 8300000, guid: c9b5e881dd9f84041ad15e230a5ce299, type: 3}
     - target: {fileID: 8954861681372400316, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -62.80005
+      objectReference: {fileID: 0}
+    - target: {fileID: 9004743077861076469, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.057617188
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47691e4e99924ad4b9e9994d990c0874, type: 3}

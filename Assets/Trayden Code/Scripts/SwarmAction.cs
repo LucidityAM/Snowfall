@@ -14,7 +14,7 @@ public class SwarmAction : MonoBehaviour
 
     void Start() 
     {
-        origPos = gameObject.transform.position;
+        origPos = GameObject.Find("Beehive").GetComponent<BeehiveOtherAction>().origPos;
         bush = GameObject.FindGameObjectWithTag("Bush");
         player = GameObject.FindGameObjectWithTag("Player");
         keyItemActionController = GameObject.FindGameObjectWithTag("Action Controller");

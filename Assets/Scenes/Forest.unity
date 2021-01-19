@@ -499,7 +499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 186493145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.73, y: -4.02, z: 0}
+  m_LocalPosition: {x: 96.59, y: -4.02, z: 0}
   m_LocalScale: {x: 1.9193043, y: 0.52764016, z: 1}
   m_Children: []
   m_Father: {fileID: 1258825661}
@@ -666,8 +666,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beehive: {fileID: 1075765827}
-  beeSwarm: {fileID: 7882568940765837045, guid: becf7b264735a6565be67421ec6e8cde,
-    type: 3}
   huh: {fileID: 1233753991}
   huhAction: {fileID: 1525933687}
   gyerjht: {fileID: 2013682900}
@@ -763,7 +761,7 @@ GameObject:
   - component: {fileID: 325208346}
   m_Layer: 9
   m_Name: FloorTemp
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -832,7 +830,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 7b05f3f2d69134b4c99111290107aebd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -852,7 +850,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325208345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.84844, y: -2.0664535, z: 59.73828}
+  m_LocalPosition: {x: 16.84844, y: -2.0664535, z: 0}
   m_LocalScale: {x: 76.77217, y: 0.52764016, z: 1}
   m_Children: []
   m_Father: {fileID: 2121134138}
@@ -1087,7 +1085,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 551063343
   m_SortingLayer: 2
-  m_SortingOrder: 5
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: 0c40b55c7b7e256a0908257e9ae64194, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1430,7 +1428,7 @@ GameObject:
   - component: {fileID: 836649845}
   m_Layer: 9
   m_Name: FloorTemp (1)
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1889,6 +1887,8 @@ GameObject:
   - component: {fileID: 1075765830}
   - component: {fileID: 1075765829}
   - component: {fileID: 1075765828}
+  - component: {fileID: 1075765831}
+  - component: {fileID: 1075765832}
   m_Layer: 10
   m_Name: Beehive
   m_TagString: Key Item
@@ -1990,6 +1990,43 @@ Transform:
   m_Father: {fileID: 305365822}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &1075765831
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075765827}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1075765832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075765827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f42c48e31b100af8991302c9fa754305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beeSwarm: {fileID: 7882568940765837045, guid: becf7b264735a6565be67421ec6e8cde,
+    type: 3}
+  beeLight: {fileID: 633698765}
+  origPos: {x: 0, y: 0}
 --- !u!1001 &1120138793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2537,7 +2574,7 @@ GameObject:
   - component: {fileID: 1580140125}
   m_Layer: 9
   m_Name: FloorTemp (2)
-  m_TagString: Untagged
+  m_TagString: floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

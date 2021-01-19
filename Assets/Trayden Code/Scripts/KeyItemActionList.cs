@@ -5,7 +5,6 @@ using UnityEngine;
 public class KeyItemActionList : MonoBehaviour
 {
     public GameObject beehive;
-    public GameObject beeSwarm;
     public GameObject huh;
     public GameObject huhAction;
     public GameObject gyerjht;
@@ -13,9 +12,13 @@ public class KeyItemActionList : MonoBehaviour
     public bool isInPosition = false;
     IEnumerator BeehiveAction()
     {
-        Instantiate(beeSwarm, beehive.transform.position, Quaternion.identity);
-        beehive.gameObject.SetActive(false);
-        yield return null;
+        Vector3 finalPos = new Vector3(beehive.transform.position.x, -1.87f, 0);
+        Vector3 velocity = Vector3.zero;
+        while(beehive.transform.position != finalPos)
+        {
+            beehive.transform.position = Vector3.SmoothDamp(beehive.transform.position, finalPos, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
+            yield return null;
+        }
     }
     IEnumerator HuhAction()
     {
@@ -29,6 +32,12 @@ public class KeyItemActionList : MonoBehaviour
 
     IEnumerator SnowpileAction()
     {
-        yield return null;
+        Vector3 finalPos = new Vector3(snowpile.transform.position.x, -1.9f, 0);
+        Vector3 velocity = Vector3.zero;
+        while(snowpile.transform.position != finalPos)
+        {
+            snowpile.transform.position = Vector3.SmoothDamp(snowpile.transform.position, finalPos, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
+            yield return null;
+        }
     }
 }

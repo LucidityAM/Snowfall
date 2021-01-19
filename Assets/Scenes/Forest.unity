@@ -670,6 +670,7 @@ MonoBehaviour:
   huhAction: {fileID: 0}
   gyerjht: {fileID: 2013682900}
   snowpile: {fileID: 410811197}
+  player: {fileID: 0}
   isInPosition: 0
 --- !u!114 &265705388
 MonoBehaviour:
@@ -1031,6 +1032,7 @@ GameObject:
   - component: {fileID: 410811198}
   - component: {fileID: 410811200}
   - component: {fileID: 410811199}
+  - component: {fileID: 410811201}
   m_Layer: 10
   m_Name: Snowpile
   m_TagString: Key Item
@@ -1132,6 +1134,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &410811201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410811197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 771c2e9e0103b9437a0fe7a4659b8739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gyerjht: {fileID: 2013682900}
 --- !u!1001 &570382753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3217,6 +3232,8 @@ GameObject:
   - component: {fileID: 2013682902}
   - component: {fileID: 2013682901}
   - component: {fileID: 2013682904}
+  - component: {fileID: 2013682906}
+  - component: {fileID: 2013682905}
   m_Layer: 10
   m_Name: Gyerjht
   m_TagString: Key Item
@@ -3318,7 +3335,19 @@ Transform:
   m_Father: {fileID: 305365822}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &2013682904
+--- !u!114 &2013682904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013682900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 033b85e2c3f70c060a8ff785b870b1c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!50 &2013682905
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -3339,6 +3368,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2013682906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2013682900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d69cc01115b700b7ba2e65f7309b0a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalPos: {x: 0, y: 0, z: 0}
 --- !u!1 &2018787875
 GameObject:
   m_ObjectHideFlags: 0

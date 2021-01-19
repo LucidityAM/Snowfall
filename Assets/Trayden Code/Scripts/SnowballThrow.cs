@@ -29,11 +29,6 @@ public class SnowballThrow : MonoBehaviour
                 gameObject.GetComponent<UnlockThrow>().isActive = false;
                 gameObject.GetComponent<SnowballThrow>().enabled = false;
             }
-            else if(hit.collider.CompareTag(null))
-            {
-                gameObject.GetComponent<UnlockThrow>().isActive = false;
-                gameObject.GetComponent<SnowballThrow>().enabled = false;
-            }
             else
             {
                 gameObject.GetComponent<UnlockThrow>().isActive = false;

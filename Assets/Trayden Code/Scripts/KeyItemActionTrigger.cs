@@ -18,6 +18,10 @@ public class KeyItemActionTrigger : MonoBehaviour
     void Update()
     {
         gameObject.transform.position = Vector2.SmoothDamp(gameObject.transform.position, keyItem.transform.position, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
+        if(keyItem.gameObject.name == "Huh")
+        {
+            gameObject.transform.position = Vector2.SmoothDamp(gameObject.transform.position, new Vector2(keyItem.transform.position.x, 3f), ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
+        }
     }
     
     public void OnTriggerEnter2D(Collider2D collision)

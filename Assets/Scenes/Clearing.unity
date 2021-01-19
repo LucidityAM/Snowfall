@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1780165071711638835, guid: de6bfc717c175104589e96024ec27002,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0037174688
+      objectReference: {fileID: 0}
     - target: {fileID: 1944769838493985424, guid: de6bfc717c175104589e96024ec27002,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -217,6 +222,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
       value: 0.19272369
+      objectReference: {fileID: 0}
+    - target: {fileID: 3137888209590531907, guid: de6bfc717c175104589e96024ec27002,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.07320733
       objectReference: {fileID: 0}
     - target: {fileID: 3137888209636182905, guid: de6bfc717c175104589e96024ec27002,
         type: 3}
@@ -287,6 +297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9925202
+      objectReference: {fileID: 0}
+    - target: {fileID: 6477434298052395115, guid: de6bfc717c175104589e96024ec27002,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.00879156
       objectReference: {fileID: 0}
     - target: {fileID: 6667654562478944110, guid: de6bfc717c175104589e96024ec27002,
         type: 3}
@@ -890,7 +905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d16b79a047e18243b50d9caeac1cc28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: Credits
+  sceneName: Forest
   sceneTransition: {fileID: 2345587055499524751}
 --- !u!61 &1150729484
 BoxCollider2D:

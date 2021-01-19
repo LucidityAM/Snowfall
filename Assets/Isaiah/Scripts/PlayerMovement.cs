@@ -81,12 +81,13 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (rb.velocity.x < 0)
             {
+
                 this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            //else if (rb.velocity.x == 0)
-            //{
-            //    this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
-            //}
+            else if (rb.velocity.x == 0)
+            {
+                this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
 
             if (Mathf.Abs(rb.velocity.x) != 0 && isGrounded)
             {

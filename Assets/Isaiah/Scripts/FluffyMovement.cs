@@ -22,9 +22,6 @@ public class FluffyMovement : MonoBehaviour
 
     void Update()
     {
-
-        Debug.Log(DialogueConditions.dogTrigger);
-
         if(DialogueConditions.dogTrigger == false)
         {
             if (Vector2.Distance(Character.transform.position, gameObject.transform.position) >= followDistance)

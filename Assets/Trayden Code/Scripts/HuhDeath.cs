@@ -6,12 +6,12 @@ using UnityEngine.SceneManagement;
 public class HuhDeath : MonoBehaviour
 {
     private GameObject bush;
-    private PolygonCollider2D huhCollider;
+    private BoxCollider2D huhCollider;
 
     void Start() 
     {
         bush = GameObject.FindGameObjectWithTag("Bush");
-        huhCollider = gameObject.GetComponent<PolygonCollider2D>();
+        huhCollider = gameObject.GetComponent<BoxCollider2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision) 

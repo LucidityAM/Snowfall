@@ -27,7 +27,6 @@ public class Transition : MonoBehaviour
 
     public IEnumerator Stop()
     {
-        Debug.Log(wait);
 
         playerMovement.enabled = false;
         Player.velocity = new Vector2(0f, 0f);
@@ -38,6 +37,8 @@ public class Transition : MonoBehaviour
             anim.SetFloat("walkSpeed", 0);
             yield return null;
         }
+
+        yield return new WaitForSeconds(3f);
 
         transition.SetActive(true);
         

@@ -23,6 +23,9 @@ public class ScaryTransition : MonoBehaviour
     public Animator playerAnim;
     public GameObject transitionBar;
 
+    public AudioSource fire;
+    public AudioSource staticNoise;
+
     void Start()
     {
         fade = 1f;
@@ -37,6 +40,8 @@ public class ScaryTransition : MonoBehaviour
 
         staticGO.SetActive(true);
 
+        staticNoise.enabled = true;
+
         yield return new WaitForSeconds(4.5f);
 
         DissolveGO.SetActive(true);
@@ -49,6 +54,7 @@ public class ScaryTransition : MonoBehaviour
 
         chromaticGO.GetComponent<SpriteRenderer>().enabled = false;
 
+        staticNoise.enabled = false;
         Dissolve();
        
     }
@@ -64,6 +70,7 @@ public class ScaryTransition : MonoBehaviour
         if (isDissolving)
         {
             fade -= Time.deltaTime *.4f;
+            fire.enabled = true;
 
             if (fade <= 0f)
             {
@@ -76,6 +83,7 @@ public class ScaryTransition : MonoBehaviour
                 fade = 0f;
                 isDissolving = false;
                 DissolveGO.SetActive(false);
+                fire.enabled = false;
             }
 
             dissolveMat.SetFloat("_Fade", fade); 

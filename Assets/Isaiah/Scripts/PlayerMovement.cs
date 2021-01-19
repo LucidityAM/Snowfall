@@ -21,11 +21,14 @@ public class PlayerMovement : MonoBehaviour
     public float rememberGroundedFor;
     float lastTimeGrounded;
 
-    public string currentScene;
+    private string currentScene;
+
+    public bool isDead;
 
     //Components
     Rigidbody2D rb;
     Animator anim;
+    public Animator eyes;
 
     void Start()
     {
@@ -37,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        
+        isDead = Death.isDead;
 
         Move();
 
@@ -45,6 +48,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
             BetterJump();
+        }
+
+        if (isDead)
+        {
+            anim.SetBool("isDead", true);
+            eyes.SetBool("Dead", true);
+        }
+        else
+        {
+            anim.SetBool("isDead", false);
+            eyes.SetBool("Dead", false);
         }
         
         CheckIfGrounded();

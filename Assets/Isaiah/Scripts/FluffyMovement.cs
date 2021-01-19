@@ -7,7 +7,7 @@ public class FluffyMovement : MonoBehaviour
     public GameObject Character; // Target Object to follow
     Animator anim;
 
-    public float speed = 0.1F; // Speed
+    public float speed; // Speed
     public float followDistance; //Distance to follow
 
     private Vector2 directionOfCharacter;

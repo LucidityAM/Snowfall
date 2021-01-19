@@ -1789,8 +1789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Character: {fileID: 607476068}
-  speed: 0.14
-  followDistance: 3.18
+  speed: 0.1
+  followDistance: 4
   runAway: {fileID: 153229269}
 --- !u!95 &681673935
 Animator:

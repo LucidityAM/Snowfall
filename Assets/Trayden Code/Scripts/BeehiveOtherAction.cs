@@ -20,7 +20,7 @@ public class BeehiveOtherAction : MonoBehaviour
             Instantiate(beeSwarm, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2.25f), Quaternion.identity);
             beeLight.transform.position = new Vector2(100f, 100f);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
-            gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         else if(collision.gameObject.CompareTag("Player"))
         {

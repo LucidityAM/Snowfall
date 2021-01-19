@@ -22,7 +22,7 @@ public class GyerjhtOtherAction : MonoBehaviour
         }
         if(hasPassedThreshold == true)
         {
-            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, finalPos, .05f);
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, finalPos, .15f);
         }
     }
 }

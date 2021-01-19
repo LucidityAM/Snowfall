@@ -1,79 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1092919783676831319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2138542559558033523}
-  - component: {fileID: 5068708571122094676}
-  - component: {fileID: 7737699435159232708}
-  m_Layer: 5
-  m_Name: Sprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2138542559558033523
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092919783676831319}
-  m_LocalRotation: {x: -0, y: 0, z: 0.0000018645078, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2887378055832211684}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.026}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -605.5155, y: 1.8946533}
-  m_SizeDelta: {x: -1208.6062, y: 2.5466309}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &5068708571122094676
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092919783676831319}
-  m_CullTransparentMesh: 0
---- !u!114 &7737699435159232708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092919783676831319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.38431373}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2887378055553367519
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,10 +32,10 @@ RectTransform:
   m_Father: {fileID: 2887378055832211684}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.37500003}
-  m_AnchorMin: {x: 0.178, y: 0.098000005}
-  m_AnchorMax: {x: 0.98200005, y: 0.8632514}
-  m_AnchoredPosition: {x: 0.4000244, y: 2.699829}
-  m_SizeDelta: {x: -6.0490723, y: 12.06369}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -140.5, y: -25.5}
+  m_SizeDelta: {x: -741.0491, y: -142.93631}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2887378055553367516
 CanvasRenderer:
@@ -139,8 +65,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 120
+    m_Font: {fileID: 12800000, guid: 8bcf581ff2f560c4c9a7fb03ac85d8ee, type: 3}
+    m_FontSize: 170
     m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 0
@@ -151,7 +77,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: dudekaisjudhiausdhsiaoudhnsaoudhsaoihdjsaiouhdssaiudhasioudhasiodhasoiuhdaoihudsaoiudhasidhsaiodhsaioudh
+  m_Text: tes test test test test test test test test test test
 --- !u!1 &2887378055832211685
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,7 +110,6 @@ RectTransform:
   m_Children:
   - {fileID: 2887378055553367518}
   - {fileID: 9086075349705694030}
-  - {fileID: 2138542559558033523}
   m_Father: {fileID: 2887378056438694696}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -2.026}
@@ -300,10 +225,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 2887378055553367517}
   textBox: {fileID: 2887378055832211685}
-  sprite: {fileID: 1092919783676831319}
+  sprite: {fileID: 0}
+  audio: {fileID: 0}
+  nextSound: {fileID: 0}
   player: {fileID: 0}
   pause: {fileID: 0}
   isActive: 0
+  endText: 0
+  dogTrigger: 0
 --- !u!1 &3750822444001334088
 GameObject:
   m_ObjectHideFlags: 0

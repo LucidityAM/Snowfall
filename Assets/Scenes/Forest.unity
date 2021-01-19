@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 4379214806589876099, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5875898091813048234, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
@@ -2649,7 +2649,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1401687946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2944,6 +2944,7 @@ GameObject:
   - component: {fileID: 1833615589}
   - component: {fileID: 1833615588}
   - component: {fileID: 1833615587}
+  - component: {fileID: 1833615591}
   m_Layer: 0
   m_Name: Fluffy
   m_TagString: Untagged
@@ -3061,6 +3062,18 @@ Transform:
   m_Father: {fileID: 1258825661}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1833615591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833615586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d92d6684fa7e712b9b2996f35e01069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1889133218
 PrefabInstance:
   m_ObjectHideFlags: 0

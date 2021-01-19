@@ -9,6 +9,7 @@ public class KeyItemActionList : MonoBehaviour
     public GameObject huhAction;
     public GameObject gyerjht;
     public GameObject snowpile;
+    public GameObject player;
     public bool isInPosition = false;
     IEnumerator BeehiveAction()
     {
@@ -27,7 +28,9 @@ public class KeyItemActionList : MonoBehaviour
     }
     IEnumerator GyerjhtAction()
     {
-        yield return null;
+        gyerjht.GetComponent<GyerjhtOtherAction>().enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        gyerjht.GetComponent<GyerjhtOtherAction>().enabled = true;
     }
 
     IEnumerator SnowpileAction()

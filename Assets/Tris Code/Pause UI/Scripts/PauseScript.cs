@@ -82,8 +82,11 @@ public class PauseScript : MonoBehaviour
     //So I will now use 2 sets of 2 methods to do the exact same thing!
     public IEnumerator FakeOpenMenu()
     {
-        audio.clip = openSound;
-        audio.Play();
+        if (audio != null)
+        {
+            audio.clip = openSound;
+            audio.Play();
+        }
         paused = true;
         ToggleScripts();
         yield return new WaitForSeconds(0.1f);
@@ -93,8 +96,11 @@ public class PauseScript : MonoBehaviour
 
     public IEnumerator FakeCloseMenu()
     {
-        audio.clip = closeSound;
-        audio.Play();
+        if (audio != null)
+        {
+            audio.clip = closeSound;
+            audio.Play();
+        }
         paused = false;
         ToggleScripts();
         fakepauseBGAnim.SetBool("IsOpen", false);

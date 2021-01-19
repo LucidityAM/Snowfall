@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SceneTrigger : MonoBehaviour
 {
-    public string sceneName;
+    public int sceneName;
     public SceneMenuManager sceneTransition;
     // Start is called before the first frame update
     void Start()

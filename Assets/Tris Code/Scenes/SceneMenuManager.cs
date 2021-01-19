@@ -7,9 +7,9 @@ public class SceneMenuManager : MonoBehaviour
 {
     public Animator sceneTransition;
 
-    private string levelToLoad;
+    private int levelToLoad;
 
-    public void FadeToLevel(string levelName)
+    public void FadeToLevel(int levelName)
     {
         levelToLoad = levelName;
         sceneTransition.SetTrigger("FadeOut");
@@ -29,7 +29,7 @@ public class SceneMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            FadeToLevel("Credits");
+            FadeToLevel(0);
         }           
     }
 

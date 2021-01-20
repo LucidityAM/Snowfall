@@ -15,6 +15,7 @@ TagManager:
   - Key Light
   - Bush
   - Mimic
+  - Beehive
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,7 @@ public class BeehiveOtherAction : MonoBehaviour
 {
     public GameObject beeSwarm;
     public GameObject beeLight;
+    public GameObject Mimic;
     public Vector2 origPos;
 
     void Start() 
@@ -24,7 +25,17 @@ public class BeehiveOtherAction : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
+            beeLight.transform.position = new Vector2(100f, 100f);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             StartCoroutine(DeadTransition());
+        }
+        else if(collision.gameObject.CompareTag("Mimic"))
+        {
+            beeLight.transform.position = new Vector2(100f, 100f);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            Mimic.GetComponent<MimicAction>().beehiveHitCount++;
         }
     }
 

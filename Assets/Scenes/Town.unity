@@ -1584,8 +1584,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 742924376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.64, y: -2.72, z: 2.0522325}
-  m_LocalScale: {x: 2.2363732, y: 0.37486792, z: 1}
+  m_LocalPosition: {x: 23.269, y: -2.46, z: 2.0522325}
+  m_LocalScale: {x: 0.7373315, y: 0.37486792, z: 1}
   m_Children: []
   m_Father: {fileID: 1871900536}
   m_RootOrder: 1
@@ -1604,6 +1604,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dogTrigger: 1
+    sceneTransition: 0
+    sceneIndex: 0
     sentences:
     - "\"Wuh--Fluffy! What's the matter, girl? Did you find a great spot?\"\r"
     - "\"...Fluffy?...Did you\u2026?\""
@@ -2272,6 +2274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dogTrigger: 0
+    sceneTransition: 0
+    sceneIndex: 0
     sentences:
     - "\"Come on, girl, we've gotta find the best hiding spot for the snowball fight!\"
       \r"

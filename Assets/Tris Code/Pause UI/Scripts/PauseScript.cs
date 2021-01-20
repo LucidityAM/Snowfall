@@ -34,7 +34,6 @@ public class PauseScript : MonoBehaviour
     {
         paused = false;
         PauseConditions.fakeside = true;
-
         fakepauseBG.SetActive(false);
         realpauseBG.SetActive(false);
 
@@ -55,28 +54,28 @@ public class PauseScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && paused == false)
-        {
-            if (PauseConditions.fakeside == true)
+            if (Input.GetKeyDown(KeyCode.Escape) && paused == false)
             {
-                StartCoroutine("FakeOpenMenu");
+                if (PauseConditions.fakeside == true)
+                {
+                    StartCoroutine("FakeOpenMenu");
+                }
+                else
+                {
+                    StartCoroutine("RealOpenMenu");
+                }
             }
-            else
+            else if (Input.GetKeyDown(KeyCode.Escape) && paused == true)
             {
-                StartCoroutine("RealOpenMenu");
+                if (PauseConditions.fakeside == true)
+                {
+                    StartCoroutine("FakeCloseMenu");
+                }
+                else
+                {
+                    StartCoroutine("RealCloseMenu");
+                }
             }
-        }
-        else if(Input.GetKeyDown(KeyCode.Escape) && paused == true)
-        {
-            if (PauseConditions.fakeside == true)
-            {
-                StartCoroutine("FakeCloseMenu");
-            }
-            else
-            {
-                StartCoroutine("RealCloseMenu");
-            }
-        }
     }
 
     public void StartEnumerator(string name)
@@ -90,7 +89,6 @@ public class PauseScript : MonoBehaviour
     public IEnumerator FakeOpenMenu()
     {
         paused = true;
-        ToggleScripts();
         if (audio != null)
         {
             audio.clip = openSound;
@@ -99,12 +97,13 @@ public class PauseScript : MonoBehaviour
         yield return new WaitForSeconds(0.1f);
         fakepauseBG.SetActive(true);
         fakepauseBGAnim.SetBool("IsOpen", true);
+        ToggleScripts();
+        yield return new WaitForSeconds(.2f);
     }
 
     public IEnumerator FakeCloseMenu()
     {
         paused = false;
-        ToggleScripts();
         if (audio != null)
         {
             audio.clip = closeSound;
@@ -114,22 +113,25 @@ public class PauseScript : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         fakepauseBG.SetActive(false);
         yield return new WaitForSeconds(0.1f);
+        ToggleScripts();
+        yield return new WaitForSeconds(.2f);
     }
     public IEnumerator RealOpenMenu()
     {
         paused = true;
-        ToggleScripts();
         yield return new WaitForSeconds(0.1f);
         realpauseBG.SetActive(true);
+        ToggleScripts();
+        yield return new WaitForSeconds(.2f);
     }
 
     public IEnumerator RealCloseMenu()
     {
         paused = false;
-        ToggleScripts();
-        yield return new WaitForSeconds(0.2f);
         realpauseBG.SetActive(false);
         yield return new WaitForSeconds(0.1f);
+        ToggleScripts();
+        yield return new WaitForSeconds(.2f);
     }
 
     public void ToggleScripts()
@@ -137,11 +139,23 @@ public class PauseScript : MonoBehaviour
         GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC Idle");
         Animator[] npcAnims = new Animator[npcs.Length];
         NPC[] npcScripts = new NPC[npcs.Length];
-        
+        DialogueTrigger[] dialogues = FindObjectsOfType<DialogueTrigger>();
+        PhysDialogueTrigger[] physDialogues = FindObjectsOfType<PhysDialogueTrigger>();
+
         for (int i = 0; i < npcs.Length; i++)
         {
             npcAnims[i] = npcs[i].GetComponent<Animator>();
             npcScripts[i] = npcs[i].GetComponent<NPC>();
+        }
+
+        for(int i = 0; i < dialogues.Length; i++)
+        {
+            dialogues[i].enabled = !dialogues[i].enabled;
+        }
+
+        foreach(PhysDialogueTrigger trigger in physDialogues)
+        {
+            trigger.enabled = !trigger.enabled;
         }
 
         foreach (Animator anim in npcAnims)

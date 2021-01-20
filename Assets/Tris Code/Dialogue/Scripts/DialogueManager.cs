@@ -233,6 +233,7 @@ public class DialogueManager : MonoBehaviour
         if (snowballThrowing != null) { snowballThrowing.SetActive(true); }
         #endregion
 
+        pause.GetComponent<PauseScript>().fakepauseBG.SetActive(false);
         if (sceneTransition == true)
         {
             FindObjectOfType<SceneMenuManager>().FadeToLevel(sceneIndex);

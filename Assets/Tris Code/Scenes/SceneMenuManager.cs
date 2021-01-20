@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneMenuManager : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class SceneMenuManager : MonoBehaviour
     {
         levelToLoad = levelName;
         sceneTransition.SetTrigger("FadeOut");
+
+        Button[] buttons = FindObjectsOfType<Button>();
+
+        foreach(Button button in buttons)
+        {
+            button.enabled = false;
+        }
     }
 
     public void OnFadeComplete()

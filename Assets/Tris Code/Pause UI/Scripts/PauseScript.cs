@@ -22,6 +22,12 @@ public class PauseScript : MonoBehaviour
     public AudioClip closeSound;
     #endregion
 
+
+    #region enemy disabling
+    public GameObject gyerjht;
+    public HuhAction huh;
+    public Animator huhAnim;
+    #endregion
     private bool paused;
 
     void Awake()
@@ -38,6 +44,7 @@ public class PauseScript : MonoBehaviour
         playerRB = player.GetComponent<Rigidbody2D>();
         playerAnim = player.GetComponent<Animator>();
         #endregion
+  
     }
     // Start is called before the first frame update
     void Start()
@@ -130,7 +137,7 @@ public class PauseScript : MonoBehaviour
         GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC Idle");
         Animator[] npcAnims = new Animator[npcs.Length];
         NPC[] npcScripts = new NPC[npcs.Length];
-
+        
         for (int i = 0; i < npcs.Length; i++)
         {
             npcAnims[i] = npcs[i].GetComponent<Animator>();
@@ -165,12 +172,25 @@ public class PauseScript : MonoBehaviour
 
         playerMovement.enabled = !playerMovement.isActiveAndEnabled;
         playerAnim.enabled = !playerAnim.enabled;
+        if(FindObjectOfType<UnlockThrow>() != null)
+        {
+            FindObjectOfType<UnlockThrow>().enabled = !FindObjectOfType<UnlockThrow>().enabled;
+        }
         if (fluffy != null)
         {
             fluffy.GetComponent<Animator>().enabled = !fluffy.GetComponent<Animator>().enabled;
             fluffy.GetComponent<FluffyMovement>().enabled = !fluffy.GetComponent<FluffyMovement>().enabled;
         }
-    
-
+        if(gyerjht != null)
+        {
+            gyerjht.GetComponent<Animator>().enabled = !gyerjht.GetComponent<Animator>().enabled;
+            gyerjht.GetComponent<GyerjhtOtherAction>().enabled = !gyerjht.GetComponent<GyerjhtOtherAction>().enabled;
+            huhAnim.enabled = !huhAnim.enabled;
+            huh.enabled = !huh.enabled;
+        }
+        if(FindObjectOfType<SwarmAction>() != null)
+        {
+            FindObjectOfType<SwarmAction>().enabled = !FindObjectOfType<SwarmAction>().enabled;
+        }
     }
 }

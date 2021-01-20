@@ -1090,6 +1090,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 570382754}
+    - target: {fileID: 7745692530656737495, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: gyerjht
+      value: 
+      objectReference: {fileID: 2013682900}
+    - target: {fileID: 7745692530656737495, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: huhAnim
+      value: 
+      objectReference: {fileID: 2282785168940533039}
+    - target: {fileID: 7745692530656737495, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: huh
+      value: 
+      objectReference: {fileID: 499762143}
+    - target: {fileID: 7745692530656737495, guid: 47691e4e99924ad4b9e9994d990c0874,
+        type: 3}
+      propertyPath: beehive
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9004743077861076469, guid: 47691e4e99924ad4b9e9994d990c0874,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2707,7 +2727,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: feabe90afe24129b6996c688a4b3e326, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_Volume: 0.168
   m_Pitch: 1
   Loop: 1
   Mute: 0

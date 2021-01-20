@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1552,6 +1552,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 419361587}
+    - target: {fileID: 8080011419401329603, guid: 3c8c880511759eb4f80a5c20e890e74a,
+        type: 3}
+      propertyPath: snowballThrowing
+      value: 
+      objectReference: {fileID: 1527983252}
     - target: {fileID: 8457797750406071643, guid: 3c8c880511759eb4f80a5c20e890e74a,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -103,7 +103,7 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         playerAnim.SetFloat("walkSpeed", 0);
         playerAnim.SetBool("inJump", false);
-        snowballThrowing.SetActive(false);
+        if (snowballThrowing != null) { snowballThrowing.SetActive(false); }
         pause.SetActive(false);
         SetNPCsActive(false);
         endText = false;
@@ -230,7 +230,7 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         pause.SetActive(true);
         SetNPCsActive(true);
-        snowballThrowing.SetActive(true);
+        if (snowballThrowing != null) { snowballThrowing.SetActive(true); }
         #endregion
 
         if (sceneTransition == true)

@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject player;
     public GameObject pause;
+    public GameObject snowballThrowing;
 
     private Animator playerAnim;
 
@@ -53,6 +54,7 @@ public class DialogueManager : MonoBehaviour
         textBoxAnim = textBox.GetComponent<Animator>();
         if (sprite != null) { spriteAnim = sprite.GetComponent<Animator>(); }
         if (sprite != null) { spriteImage = sprite.GetComponent<Image>(); }
+
         playerAnim = player.GetComponent<Animator>();
 
         SM = FindObjectOfType<SceneMenuManager>();
@@ -101,6 +103,7 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         playerAnim.SetFloat("walkSpeed", 0);
         playerAnim.SetBool("inJump", false);
+        snowballThrowing.SetActive(false);
         pause.SetActive(false);
         SetNPCsActive(false);
         endText = false;
@@ -227,9 +230,10 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
         pause.SetActive(true);
         SetNPCsActive(true);
+        snowballThrowing.SetActive(true);
         #endregion
 
-        if(sceneTransition == true)
+        if (sceneTransition == true)
         {
             FindObjectOfType<SceneMenuManager>().FadeToLevel(sceneIndex);
         }

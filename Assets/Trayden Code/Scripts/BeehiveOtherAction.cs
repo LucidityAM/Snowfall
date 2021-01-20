@@ -52,7 +52,13 @@ public class BeehiveOtherAction : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         Death.isDead = false;
-
-        SceneManager.LoadScene("Forest");
+        if(SceneManager.GetActiveScene().name == "Chase")
+        {
+            SceneManager.LoadScene("Chase");
+        }
+        else
+        {
+            SceneManager.LoadScene("Forest");   
+        }
     }
 }

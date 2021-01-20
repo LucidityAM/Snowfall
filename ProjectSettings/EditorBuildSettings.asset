@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Chase.unity
     guid: 0a2e7faf5be29b645beb8917566653c9
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 1c90408f0802038469156c506573a101
   m_configObjects: {}

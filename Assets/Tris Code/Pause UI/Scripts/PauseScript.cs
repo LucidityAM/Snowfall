@@ -192,5 +192,9 @@ public class PauseScript : MonoBehaviour
         {
             FindObjectOfType<SwarmAction>().enabled = !FindObjectOfType<SwarmAction>().enabled;
         }
+        if(FindObjectOfType<MimicAction>() != null)
+        {
+            FindObjectOfType<MimicAction>().enabled = !FindObjectOfType<MimicAction>().enabled;
+        }
     }
 }

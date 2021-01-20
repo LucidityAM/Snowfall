@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1610,6 +1610,19 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 570382753}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &570382755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570382754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69c894067a34ba90e8833edb64d28211, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bush: {fileID: 30554021}
 --- !u!224 &606096450 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8417490697712481489, guid: 33d7e2e66a9cfc148a362ddbccd692ca,
@@ -2681,6 +2694,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0.2998047
       objectReference: {fileID: 0}
+    - target: {fileID: 5219152627699628613, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.25585938
+      objectReference: {fileID: 0}
     - target: {fileID: 5219152629139841012, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda,
         type: 3}
       propertyPath: player
@@ -2695,6 +2713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 4.6757812
+      objectReference: {fileID: 0}
+    - target: {fileID: 5582057242251223462, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -203.43886
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bfbcfb01fdb3fe45aa6c399501e1cda, type: 3}

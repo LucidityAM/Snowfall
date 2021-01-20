@@ -24,7 +24,7 @@ public class MimicAction : MonoBehaviour
             gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, finalPos, newSpeed);
             if(beehiveHitCount >= 3)
             {
-                SceneManager.LoadScene("Credits");
+                SceneManager.LoadScene("WinScreen");
             }
         }
     }

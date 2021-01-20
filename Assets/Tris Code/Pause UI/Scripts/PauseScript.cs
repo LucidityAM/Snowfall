@@ -82,13 +82,13 @@ public class PauseScript : MonoBehaviour
     //So I will now use 2 sets of 2 methods to do the exact same thing!
     public IEnumerator FakeOpenMenu()
     {
+        paused = true;
+        ToggleScripts();
         if (audio != null)
         {
             audio.clip = openSound;
             audio.Play();
         }
-        paused = true;
-        ToggleScripts();
         yield return new WaitForSeconds(0.1f);
         fakepauseBG.SetActive(true);
         fakepauseBGAnim.SetBool("IsOpen", true);
@@ -96,13 +96,13 @@ public class PauseScript : MonoBehaviour
 
     public IEnumerator FakeCloseMenu()
     {
+        paused = false;
+        ToggleScripts();
         if (audio != null)
         {
             audio.clip = closeSound;
             audio.Play();
         }
-        paused = false;
-        ToggleScripts();
         fakepauseBGAnim.SetBool("IsOpen", false);
         yield return new WaitForSeconds(0.2f);
         fakepauseBG.SetActive(false);
@@ -127,32 +127,48 @@ public class PauseScript : MonoBehaviour
 
     public void ToggleScripts()
     {
+        GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC Idle");
+        Animator[] npcAnims = new Animator[npcs.Length];
+        NPC[] npcScripts = new NPC[npcs.Length];
+
+        for (int i = 0; i < npcs.Length; i++)
+        {
+            npcAnims[i] = npcs[i].GetComponent<Animator>();
+            npcScripts[i] = npcs[i].GetComponent<NPC>();
+        }
+
+        foreach (Animator anim in npcAnims)
+        {
+            if (anim != null)
+            {
+                anim.enabled = !anim.enabled;
+            }
+        }
+
+        foreach (NPC npc in npcScripts)
+        {
+            if (npc != null)
+            {
+                npc.enabled = !npc.enabled;
+            }
+        }
+
+        if (paused == true)
+        {
+            playerRB.velocity = new Vector3(0, 0, 0);
+            playerRB.bodyType = RigidbodyType2D.Static;
+        }
+        else
+        {
+            playerRB.bodyType = RigidbodyType2D.Dynamic;
+        }
+
         playerMovement.enabled = !playerMovement.isActiveAndEnabled;
         playerAnim.enabled = !playerAnim.enabled;
         if (fluffy != null)
         {
             fluffy.GetComponent<Animator>().enabled = !fluffy.GetComponent<Animator>().enabled;
             fluffy.GetComponent<FluffyMovement>().enabled = !fluffy.GetComponent<FluffyMovement>().enabled;
-        }
-        if (paused == true)
-        {
-            playerRB.velocity = new Vector3(0, 0, 0);
-            playerRB.bodyType = RigidbodyType2D.Static;
-        } else
-        {
-            playerRB.bodyType = RigidbodyType2D.Dynamic;
-        }
-    
-        GameObject[] npcs = GameObject.FindGameObjectsWithTag("NPC Idle");
-        Animator[] npcScripts = new Animator[npcs.Length];
-        for(int i = 0; i < npcs.Length; i++)
-        {
-            npcScripts[i] = npcs[i].GetComponent<Animator>();
-        }
-
-        foreach(Animator anim in npcScripts)
-        {
-            anim.enabled = !anim.enabled;
         }
     
 

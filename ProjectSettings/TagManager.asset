@@ -16,6 +16,7 @@ TagManager:
   - Bush
   - Mimic
   - Beehive
+  - floor2
   layers:
   - Default
   - TransparentFX

@@ -23,6 +23,12 @@ public class BeehiveOtherAction : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
+        else if(collision.gameObject.CompareTag("floor2"))
+        {
+            beeLight.transform.position = new Vector2(100f, 100f);
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
         else if(collision.gameObject.CompareTag("Player"))
         {
             beeLight.transform.position = new Vector2(100f, 100f);

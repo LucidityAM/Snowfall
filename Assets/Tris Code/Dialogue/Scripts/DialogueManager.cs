@@ -39,9 +39,10 @@ public class DialogueManager : MonoBehaviour
     #region Condition Variables
     public bool isActive;
     public bool endText;
-    public bool dogTrigger;
+    private bool dogTrigger;
     private bool startText;
     private bool sceneTransition;
+    private int sceneIndex;
     int count;
     #endregion
     
@@ -73,6 +74,7 @@ public class DialogueManager : MonoBehaviour
         startText = false;
         dogTrigger = false;
         DialogueConditions.dogTrigger = false;
+        sceneTransition = false;
         count = 0;
         #endregion
 
@@ -107,6 +109,8 @@ public class DialogueManager : MonoBehaviour
 
         #region Settings Bools to dialogue value
         dogTrigger = dialogue.dogTrigger;
+        sceneTransition = dialogue.sceneTransition;
+        sceneIndex = dialogue.sceneIndex;
         #endregion
 
         #region Setting Up Queues. Turning Arrays > Queues
@@ -213,6 +217,11 @@ public class DialogueManager : MonoBehaviour
         pause.SetActive(true);
         SetNPCsActive(true);
         #endregion
+
+        if(sceneTransition == true)
+        {
+            FindObjectOfType<SceneMenuManager>().FadeToLevel(sceneIndex);
+        }
 
     }
     // Update is called once per frame

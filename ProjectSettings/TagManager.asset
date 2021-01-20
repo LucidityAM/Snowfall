@@ -57,9 +57,9 @@ TagManager:
   - name: KeyItem
     uniqueID: 551063343
     locked: 0
-  - name: Dialogue UI
-    uniqueID: 1848295169
-    locked: 0
   - name: Foreground
     uniqueID: 2083197309
+    locked: 0
+  - name: Dialogue UI
+    uniqueID: 1848295169
     locked: 0

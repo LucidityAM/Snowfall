@@ -39,9 +39,10 @@ public class DialogueManager : MonoBehaviour
     #region Condition Variables
     public bool isActive;
     public bool endText;
-    public bool dogTrigger;
+    private bool dogTrigger;
     private bool startText;
     private bool sceneTransition;
+    private int sceneIndex;
     int count;
     #endregion
     
@@ -50,17 +51,18 @@ public class DialogueManager : MonoBehaviour
     {
         #region Getting All Private Components
         textBoxAnim = textBox.GetComponent<Animator>();
-        spriteAnim = sprite.GetComponent<Animator>();
-        spriteImage = sprite.GetComponent<Image>();
+        if (sprite != null) { spriteAnim = sprite.GetComponent<Animator>(); }
+        if (sprite != null) { spriteImage = sprite.GetComponent<Image>(); }
         playerAnim = player.GetComponent<Animator>();
 
         SM = FindObjectOfType<SceneMenuManager>();
         #endregion
 
         #region Turning Off All Components
+        dialogueText.enabled = false;
         dialogueText.gameObject.SetActive(false);
         textBox.SetActive(false);
-        sprite.SetActive(false); 
+        if (sprite != null) { sprite.SetActive(false); } 
         #endregion
     }
 
@@ -73,6 +75,7 @@ public class DialogueManager : MonoBehaviour
         startText = false;
         dogTrigger = false;
         DialogueConditions.dogTrigger = false;
+        sceneTransition = false;
         count = 0;
         #endregion
 
@@ -83,9 +86,10 @@ public class DialogueManager : MonoBehaviour
         #endregion
 
         #region Turning Off All Components
+        dialogueText.enabled = false;
         dialogueText.gameObject.SetActive(false);
         textBox.SetActive(false);
-        sprite.SetActive(false);
+        if(sprite != null) { sprite.SetActive(false); }
         #endregion
     }
 
@@ -95,7 +99,7 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-        playerAnim.SetFloat("walkSpeed", 0);
+        //playerAnim.SetFloat("walkSpeed", 0);
         playerAnim.SetBool("inJump", false);
         pause.SetActive(false);
         SetNPCsActive(false);
@@ -107,6 +111,8 @@ public class DialogueManager : MonoBehaviour
 
         #region Settings Bools to dialogue value
         dogTrigger = dialogue.dogTrigger;
+        sceneTransition = dialogue.sceneTransition;
+        sceneIndex = dialogue.sceneIndex;
         #endregion
 
         #region Setting Up Queues. Turning Arrays > Queues
@@ -115,10 +121,13 @@ public class DialogueManager : MonoBehaviour
         {
             sentences.Enqueue(sentence);
         }
-        sprites.Clear();
-        foreach (Sprite sprite in dialogue.sprites)
+        if (sprite != null)
         {
-            sprites.Enqueue(sprite);
+            sprites.Clear();
+            foreach (Sprite sprite in dialogue.sprites)
+            {
+                sprites.Enqueue(sprite);
+            }
         }
         voices.Clear();
         foreach (AudioClip voice in dialogue.voices)
@@ -133,13 +142,15 @@ public class DialogueManager : MonoBehaviour
 
         #region Animation For Opening The Dialogue
         textBox.SetActive(true);
-        sprite.SetActive(true);
+        if (sprite != null) { sprite.SetActive(true); }
         textBoxAnim.SetTrigger("isOpen");
-        spriteImage.sprite = sprites.Dequeue();
+
+        if (sprite != null) { spriteImage.sprite = sprites.Dequeue(); }
 
         count++;
         yield return new WaitForSeconds(0.5f);
         dialogueText.gameObject.SetActive(true);
+        dialogueText.enabled = true;
         DisplayNextSentence();
         startText = false;
         #region triggers for outside things to happen
@@ -161,9 +172,12 @@ public class DialogueManager : MonoBehaviour
         }
         if (count > 1)
         {
-            spriteImage.sprite = sprites.Dequeue();
-            audio.clip = nextSound;
-            audio.Play();
+            if (sprite != null) { spriteImage.sprite = sprites.Dequeue(); }
+            if (audio != null)
+            {
+                audio.clip = nextSound;
+                audio.Play();
+            }
         }
         count++;
         //Making local variables for the current sentence and name
@@ -201,7 +215,8 @@ public class DialogueManager : MonoBehaviour
 
         #region Turning off Animators in an Animation and Objects
         dialogueText.gameObject.SetActive(false);
-        sprite.SetActive(false);
+        if (sprite != null) { sprite.SetActive(false); }
+        dialogueText.enabled = false;
         textBoxAnim.SetTrigger("isOpen");
         yield return new WaitForSeconds(0.35f);
         textBox.SetActive(false);
@@ -213,6 +228,11 @@ public class DialogueManager : MonoBehaviour
         pause.SetActive(true);
         SetNPCsActive(true);
         #endregion
+
+        if(sceneTransition == true)
+        {
+            FindObjectOfType<SceneMenuManager>().FadeToLevel(sceneIndex);
+        }
 
     }
     // Update is called once per frame

@@ -338,8 +338,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     dogTrigger: 0
+    sceneTransition: 0
+    sceneIndex: 0
     sentences:
-    - '"There''s a great spot over by the town''s square. There''s an allyway, in-between
+    - '"There''s a great spot over by the town''s square. There''s an alleyway, in-between
       the bakery and the toy shop, where--"'
     - '"Lucas! That''s OUR hiding spot!"'
     - " \"Oh, right, right. Sorry, Flores. I...uh, don't know of any spots. anywhere!

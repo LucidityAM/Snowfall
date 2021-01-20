@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 5552598015852439024}
   m_Layer: 0
   m_Name: Lucas
-  m_TagString: NPC
+  m_TagString: NPC Idle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
+    dogTrigger: 0
     sentences:
     - '"There''s a great spot over by the town''s square. There''s an allyway, in-between
       the bakery and the toy shop, where--"'

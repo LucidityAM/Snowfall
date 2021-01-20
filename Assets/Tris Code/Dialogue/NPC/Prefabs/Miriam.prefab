@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 8038673716266092594}
   m_Layer: 0
   m_Name: Miriam
-  m_TagString: NPC
+  m_TagString: NPC Idle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
+    dogTrigger: 0
     sentences:
     - ' "Uh...why would I tell you my hiding spot? That''s like, the point of hiding."'
     sprites:

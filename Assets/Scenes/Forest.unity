@@ -3319,6 +3319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 033b85e2c3f70c060a8ff785b870b1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gyerjhtAnim: {fileID: 2013682907}
 --- !u!50 &2013682905
 Rigidbody2D:
   serializedVersion: 4
@@ -3339,7 +3340,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &2013682906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3731,7 +3732,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &2282785168940533037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3744,6 +3745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17747c11e9c1e0f45b9805b87d114c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  huhAction: {fileID: 499762141}
 --- !u!61 &2282785168940533038
 BoxCollider2D:
   m_ObjectHideFlags: 0

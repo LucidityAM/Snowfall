@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GyerjhtDeath : MonoBehaviour
 {
+    public Animator gyerjhtAnim;
      private void OnCollisionEnter2D(Collision2D collision) 
     {
         if(collision.gameObject.CompareTag("Player"))
@@ -14,9 +15,9 @@ public class GyerjhtDeath : MonoBehaviour
     }
     public IEnumerator DeadTransition()
     {
-
+        gameObject.GetComponent<GyerjhtOtherAction>().enabled = false;
+        gyerjhtAnim.SetBool("isStunned", true);
         Death.isDead = true;
-
         yield return new WaitForSeconds(1f);
         Death.isDead = false;
 

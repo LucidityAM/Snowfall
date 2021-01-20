@@ -7,6 +7,7 @@ public class HuhDeath : MonoBehaviour
 {
     private GameObject bush;
     private BoxCollider2D huhCollider;
+    public GameObject huhAction;
 
     void Start() 
     {
@@ -40,9 +41,8 @@ public class HuhDeath : MonoBehaviour
 
     public IEnumerator DeadTransition()
     {
-
+        huhAction.SetActive(false);
         Death.isDead = true;
-
         yield return new WaitForSeconds(1f);
         Death.isDead = false;
 

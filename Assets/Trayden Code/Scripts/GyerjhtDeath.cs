@@ -9,7 +9,17 @@ public class GyerjhtDeath : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Forest");
+            StartCoroutine(DeadTransition());
         }
+    }
+    public IEnumerator DeadTransition()
+    {
+
+        Death.isDead = true;
+
+        yield return new WaitForSeconds(1f);
+        Death.isDead = false;
+
+        SceneManager.LoadScene("Forest");
     }
 }

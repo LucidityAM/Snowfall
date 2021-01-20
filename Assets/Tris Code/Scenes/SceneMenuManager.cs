@@ -29,7 +29,7 @@ public class SceneMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            FadeToLevel(0);
+            FadeToLevel(4);
         }           
     }
 

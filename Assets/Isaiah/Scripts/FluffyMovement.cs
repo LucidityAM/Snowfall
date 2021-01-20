@@ -20,7 +20,7 @@ public class FluffyMovement : MonoBehaviour
         anim = gameObject.GetComponent<Animator>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(DialogueConditions.dogTrigger == false)
         {

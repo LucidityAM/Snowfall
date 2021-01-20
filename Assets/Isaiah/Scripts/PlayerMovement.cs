@@ -51,13 +51,13 @@ public class PlayerMovement : MonoBehaviour
             BetterJump();
         }
 
-        if (isDead && hasBeenKilled == false)
+        if (isDead && !hasBeenKilled)
         {
             hasBeenKilled = true;
             anim.SetBool("isDead", true);
             eyes.SetBool("Dead", true);
         }
-        else if(isDead == false && hasBeenKilled)
+        else if(!isDead && hasBeenKilled)
         {
             hasBeenKilled = false;
             anim.SetBool("isDead", false);
@@ -74,33 +74,36 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            float x = Input.GetAxisRaw("Horizontal");
-            float moveBy = x * speed;
-            rb.velocity = new Vector2(moveBy, rb.velocity.y);
+            if (!isDead)
+            {
+                float x = Input.GetAxisRaw("Horizontal");
+                float moveBy = x * speed;
+                rb.velocity = new Vector2(moveBy, rb.velocity.y);
 
-            if (rb.velocity.x > 0)
-            {
-                this.gameObject.transform.rotation = Quaternion.Euler(0,180,0);
-            }
-            else if (rb.velocity.x < 0)
-            {
+            
+                if (rb.velocity.x > 0)
+                {
+                    this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
+                else if (rb.velocity.x < 0)
+                {
 
-                this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else if (rb.velocity.x == 0)
-            {
-                this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
+                    this.gameObject.transform.rotation = Quaternion.Euler(0, 0, 0);
+                }
+                else if (rb.velocity.x == 0)
+                {
+                    this.gameObject.transform.rotation = Quaternion.Euler(0, 180, 0);
+                }
 
-            if (Mathf.Abs(rb.velocity.x) != 0 && isGrounded)
-            {
-                anim.speed = Mathf.Abs(rb.velocity.x) * .32f;
+                if (Mathf.Abs(rb.velocity.x) != 0 && isGrounded)
+                {
+                    anim.speed = Mathf.Abs(rb.velocity.x) * .32f;
+                }
+                else if (isGrounded == false)
+                {
+                    anim.speed = 0.6f;
+                }//Scales animation speed with the walk speed;
             }
-            else if (isGrounded == false)
-            {
-                anim.speed = 0.6f;
-            }//Scales animation speed with the walk speed;
-
         }
     }
 

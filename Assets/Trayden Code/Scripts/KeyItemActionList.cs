@@ -5,6 +5,8 @@ using UnityEngine;
 public class KeyItemActionList : MonoBehaviour
 {
     public GameObject beehive;
+    public GameObject beehive2;
+    public GameObject beehive3;
     public GameObject huh;
     public GameObject huhAction;
     public GameObject gyerjht;
@@ -19,6 +21,26 @@ public class KeyItemActionList : MonoBehaviour
         while(beehive.transform.position != finalPos)
         {
             beehive.transform.position = Vector3.SmoothDamp(beehive.transform.position, finalPos, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
+            yield return null;
+        }
+    }
+    IEnumerator Beehive2Action()
+    {
+        Vector3 finalPos = new Vector3(beehive2.transform.position.x, -1.87f, 0);
+        Vector3 velocity = Vector3.zero;
+        while(beehive2.transform.position != finalPos)
+        {
+            beehive2.transform.position = Vector3.SmoothDamp(beehive2.transform.position, finalPos, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
+            yield return null;
+        }
+    }
+    IEnumerator Beehive3Action()
+    {
+        Vector3 finalPos = new Vector3(beehive3.transform.position.x, -1.87f, 0);
+        Vector3 velocity = Vector3.zero;
+        while(beehive3.transform.position != finalPos)
+        {
+            beehive3.transform.position = Vector3.SmoothDamp(beehive3.transform.position, finalPos, ref velocity, .15f, Mathf.Infinity, Time.deltaTime);
             yield return null;
         }
     }

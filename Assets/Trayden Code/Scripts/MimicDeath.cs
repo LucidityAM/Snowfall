@@ -11,7 +11,7 @@ public class MimicDeath : MonoBehaviour
         {
             StartCoroutine(DeadTransition());
         }
-        else if(collision.gameObject.CompareTag("Beehive"))
+        else if(collision.gameObject.CompareTag("Key Item"))
         {
             gameObject.GetComponent<MimicAction>().enabled = false;
             StartCoroutine("BeehiveHit");

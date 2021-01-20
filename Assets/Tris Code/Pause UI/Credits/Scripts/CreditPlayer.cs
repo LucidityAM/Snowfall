@@ -8,6 +8,10 @@ public class CreditPlayer : MonoBehaviour
     public Sprite[] creditSprites;
 
     private int currentPage;
+
+    public GameObject rightButton;
+    public GameObject leftButton;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +22,25 @@ public class CreditPlayer : MonoBehaviour
     void Update()
     {
         gameObject.GetComponent<Image>().sprite = creditSprites[currentPage];
+
+        if(currentPage == 0)
+        {
+            leftButton.SetActive(false);
+        }
+        else
+        {
+            leftButton.SetActive(true);
+        }
+
+        if(currentPage == creditSprites.Length -1)
+        {
+            rightButton.SetActive(false);
+        }
+        else
+        {
+            rightButton.SetActive(true);
+        }
+
     }
 
     public void NextCredits()

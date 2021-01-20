@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 9ab908c07d616ad4d9d017c1e061a15b
+  - enabled: 1
+    path: Assets/Scenes/Chase.unity
+    guid: 0a2e7faf5be29b645beb8917566653c9
   m_configObjects: {}

@@ -2930,7 +2930,7 @@ MonoBehaviour:
   dialogue:
     dogTrigger: 1
     sceneTransition: 1
-    sceneIndex: 0
+    sceneIndex: 5
     sentences:
     - gr...
     - GGGGGGGGGGGGGGGGGGRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR

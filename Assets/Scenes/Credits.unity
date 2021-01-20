@@ -413,7 +413,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 446e3f0d0fcc4754a86de2538633c30d, type: 3}
   - {fileID: 21300000, guid: 8360002df6e50e649997a0f1896e3ff1, type: 3}
   - {fileID: 21300000, guid: b75504f5178cf9b4781f470c6ae24a4e, type: 3}
-  - {fileID: 21300000, guid: 1bfbe3df4e069bb42b820238d4ad84e2, type: 3}
+  - {fileID: 21300000, guid: b50a020ab252bda479a4ba237d630c35, type: 3}
+  rightButton: {fileID: 1046209942}
+  leftButton: {fileID: 1244218341}
 --- !u!114 &1073426222
 MonoBehaviour:
   m_ObjectHideFlags: 0

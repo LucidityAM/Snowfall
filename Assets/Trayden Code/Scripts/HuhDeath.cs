@@ -18,7 +18,7 @@ public class HuhDeath : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player") && bush.GetComponent<BushAction>().isHidden == false)
         {
-            SceneManager.LoadScene("Forest");
+            StartCoroutine(DeadTransition());
         }
     }
 
@@ -36,5 +36,16 @@ public class HuhDeath : MonoBehaviour
         {
             huhCollider.isTrigger = false;
         }
+    }
+
+    public IEnumerator DeadTransition()
+    {
+
+        Death.isDead = true;
+
+        yield return new WaitForSeconds(1f);
+        Death.isDead = false;
+
+        SceneManager.LoadScene("Forest");
     }
 }

@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private string currentScene;
 
     public bool isDead;
+    private bool hasBeenKilled;
 
     //Components
     Rigidbody2D rb;
@@ -50,13 +51,15 @@ public class PlayerMovement : MonoBehaviour
             BetterJump();
         }
 
-        if (isDead)
+        if (isDead && hasBeenKilled == false)
         {
+            hasBeenKilled = true;
             anim.SetBool("isDead", true);
             eyes.SetBool("Dead", true);
         }
-        else
+        else if(isDead == false && hasBeenKilled)
         {
+            hasBeenKilled = false;
             anim.SetBool("isDead", false);
             eyes.SetBool("Dead", false);
         }

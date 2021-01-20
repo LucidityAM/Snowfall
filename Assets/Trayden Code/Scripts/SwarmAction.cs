@@ -45,7 +45,7 @@ public class SwarmAction : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Forest");
+            StartCoroutine(DeadTransition());
         }
         if(collision.gameObject.name == "Huh")
         {
@@ -53,4 +53,16 @@ public class SwarmAction : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public IEnumerator DeadTransition()
+    {
+
+        Death.isDead = true;
+
+        yield return new WaitForSeconds(1f);
+        Death.isDead = false;
+
+        SceneManager.LoadScene("Forest");
+    }
+
 }

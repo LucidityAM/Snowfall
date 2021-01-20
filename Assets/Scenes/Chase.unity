@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1203,6 +1203,120 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb7c983c5eab1ae4aba9de8e3e06429a, type: 3}
+--- !u!1001 &773054111
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4121223532750137444, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 157.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137444, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1711
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137444, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 56.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137444, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: CustomDataModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137444, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: CustomDataModule.mode0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137444, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: TriggerModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137445, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137446, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_Name
+      value: Snow Gen
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137446, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137447, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4121223532750137447, guid: b2919a0fd9104c041b59cb1b226ab00d,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b2919a0fd9104c041b59cb1b226ab00d, type: 3}
 --- !u!1 &829132210
 GameObject:
   m_ObjectHideFlags: 0

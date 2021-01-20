@@ -25,6 +25,7 @@ public class ScaryTransition : MonoBehaviour
 
     public AudioSource fire;
     public AudioSource staticNoise;
+    public AudioSource dead;
 
     void Start()
     {
@@ -34,11 +35,14 @@ public class ScaryTransition : MonoBehaviour
 
     IEnumerator StartAnimation()
     {
+        dead.enabled = true;
 
         while (chromatic.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
             yield return null;
 
         staticGO.SetActive(true);
+
+        dead.enabled = false;
 
         staticNoise.enabled = true;
 

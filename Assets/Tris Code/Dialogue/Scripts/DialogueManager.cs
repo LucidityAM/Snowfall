@@ -99,7 +99,7 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0);
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
-        //playerAnim.SetFloat("walkSpeed", 0);
+        playerAnim.SetFloat("walkSpeed", 0);
         playerAnim.SetBool("inJump", false);
         pause.SetActive(false);
         SetNPCsActive(false);

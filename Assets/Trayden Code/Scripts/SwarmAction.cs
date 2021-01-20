@@ -35,6 +35,10 @@ public class SwarmAction : MonoBehaviour
         {
             gameObject.transform.position = Vector2.MoveTowards(gameObject.transform.position, origPos, 5f * Time.deltaTime);
         }
+        if(gameObject.transform.position.y < 0)
+        {
+            gameObject.transform.position = new Vector2(gameObject.transform.position.x, 0f);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 

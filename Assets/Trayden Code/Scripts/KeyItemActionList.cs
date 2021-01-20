@@ -11,6 +11,7 @@ public class KeyItemActionList : MonoBehaviour
     public GameObject huhAction;
     public GameObject gyerjht;
     public Animator gyerjhtAnim;
+    private bool isStunned = false;
     public GameObject snowpile;
     public GameObject player;
     public bool isInPosition = false;
@@ -51,11 +52,20 @@ public class KeyItemActionList : MonoBehaviour
     }
     IEnumerator GyerjhtAction()
     {
-        gyerjht.GetComponent<GyerjhtOtherAction>().enabled = false;
-        gyerjhtAnim.SetBool("isStunned", true);
-        yield return new WaitForSeconds(1.5f);
-        gyerjhtAnim.SetBool("isStunned", false);
-        gyerjht.GetComponent<GyerjhtOtherAction>().enabled = true;
+        if(isStunned == false)
+        {
+            isStunned = true;
+            gyerjht.GetComponent<GyerjhtOtherAction>().enabled = false;
+            gyerjhtAnim.SetBool("isStunned", true);
+            yield return new WaitForSeconds(1.5f);
+            gyerjhtAnim.SetBool("isStunned", false);
+            gyerjht.GetComponent<GyerjhtOtherAction>().enabled = true;
+            isStunned = false;
+        }
+        else
+        {
+            yield return null;
+        }
     }
 
     IEnumerator SnowpileAction()
